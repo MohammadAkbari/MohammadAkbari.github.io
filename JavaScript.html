@@ -15,20 +15,22 @@
     <main role="main" class="container">
         <div class="jumbotron">
             <h1>Closures</h1>
-            <p class="lead">A closure is a function having access to the parent scope, even after the parent function has closed.
-			<code>
-			var add = (function () {
-			  var counter = 0;
-			  return function () {counter += 1; return counter}
-			})();
+            <p class="lead">
+		<p>A closure is a function having access to the parent scope, even after the parent function has closed.</p>
+		<p>A closure is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created.</p>
+		<code>
+		var add = (function () {
+		  var counter = 0;
+		  return function () {counter += 1; return counter}
+		})();
 
-			add();
-			add();
-			add();
+		add();
+		add();
+		add();
 
-			// the counter is now 3
-			</code>
-			</p>
+		// the counter is now 3
+		</code>
+	    </p>
         </div>
     </main>
 </body>
