@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Design</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main role="main" class="container">
+        <div class="jumbotron">
+            <h1>C#</h1>
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Static Constructors</h4>
+                <hr>
+                <p>A static constructor does not take access modifiers or have parameters.</p>
+                <p>A static constructor is called automatically to initialize the class before the first instance is created or any static members are referenced.</p>
+                <p>A typical use of static constructors is when the class is using a log file and the constructor is used to write entries to this file.</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
