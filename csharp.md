@@ -1,5 +1,5 @@
 ---
-title: CSharp
+title: C#
 ---
 
 ## Static Constructors
