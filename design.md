@@ -1,3 +1,5 @@
+# Design
+
 <div class="jumbotron">
     <h1>Code Smell (Design Smells)</h1>
     <div class="alert alert-warning" role="alert">
