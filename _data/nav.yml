@@ -1,5 +1,7 @@
-docs_list_title: Notes
-docs:
+links:
+
+- title: C#
+  url: csharp
 
 - title: C#
   url: csharp
