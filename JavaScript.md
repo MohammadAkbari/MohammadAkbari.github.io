@@ -1,15 +1,13 @@
 # JavaScript
 
-<div class="jumbotron">
-		<h1>Closures</h1>
-		<p class="lead">
-		<p>A closure is a function having access to the parent scope, even after the parent function has closed.</p>
-		<p>A closure is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created.</p>
-</div>
+# Closures
 
+> A closure is a function having access to the parent scope, even after the parent function has closed.
+> A closure is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created.
 
+## sample 1
 ```js
-// sample 1
+
 	var add = (function () {
 		var counter = 0;
 		return function () {counter += 1; return counter}
@@ -22,8 +20,9 @@
 	// the counter is now 3
 ```
 		
+## sample 2
 ```js
-// sample 1
+
 	function makeAdder(x) {
 		return function(y) {
 			return x + y;
