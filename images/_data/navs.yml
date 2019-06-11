@@ -1,0 +1,26 @@
+docs_list_title: Notes
+docs:
+
+- title: C#
+  url: csharp
+
+- title: Design
+  url: design
+
+- title: Elasticsearch
+  url: elastic
+
+- title: JavaScript
+  url: JavaScript
+
+- title: Kubernetes
+  url: kubernetes
+
+- title: Promise
+  url: promise
+
+- title: TDD
+  url: tdd
+
+- title: Redux
+  url: redux

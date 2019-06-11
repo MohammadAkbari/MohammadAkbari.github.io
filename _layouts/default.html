@@ -20,16 +20,11 @@
   </head>
   <body>
       <div id="header">
+        <h2>{{ site.data.navs.docs_list_title }}</h2>
         <nav>
-          <li><a href="/">Home</a></li>
-          <li><a href="/csharp">C#</a></li>
-          <li><a href="/design">Design</a></li>
-          <li><a href="/elastic">Elasticsearch</a></li>
-          <li><a href="/JavaScript">JavaScript</a></li>
-          <li><a href="/kubernetes">Kubernetes</a></li>
-          <li><a href="/promise">Promise</a></li>
-          <li><a href="/redux">Redux</a></li>
-          <li><a href="/tdd">TDD</a></li>
+          {% for item in site.data.navs.docs %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
         </nav>
       </div>
 
