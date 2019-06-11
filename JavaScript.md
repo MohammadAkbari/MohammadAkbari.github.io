@@ -5,7 +5,9 @@
 		<p class="lead">
 		<p>A closure is a function having access to the parent scope, even after the parent function has closed.</p>
 		<p>A closure is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created.</p>
-		<pre>
+		
+		```js
+		// sample 1
 			var add = (function () {
 				var counter = 0;
 				return function () {counter += 1; return counter}
@@ -16,9 +18,10 @@
 			add();
 
 			// the counter is now 3
-			</pre>
-			
-			<pre>
+		```
+		
+		```js
+		// sample 1
 			function makeAdder(x) {
 				return function(y) {
 					return x + y;
@@ -30,5 +33,5 @@
 
 			console.log(add5(2));  // 7
 			console.log(add10(2)); // 12
-	</pre>
+		```
 </div>
