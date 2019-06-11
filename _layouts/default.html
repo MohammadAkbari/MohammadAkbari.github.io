@@ -20,9 +20,9 @@
   </head>
   <body>
       <div id="header">
-        <h2>{{ site.data.navs.docs_list_title }}</h2>
+        <h2>{{ site.data.samplelist.docs_list_title }}</h2>
         <nav>
-          {% for item in site.data.navs.docs %}
+          {% for item in site.data.samplelist.docs %}
             <li><a href="{{ item.url }}">{{ item.title }}</a></li>
           {% endfor %}
         </nav>
