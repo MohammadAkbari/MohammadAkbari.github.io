@@ -22,7 +22,7 @@
       <div id="header">
         <nav>
           {% for item in site.data.nav.links %}
-            {% if page.url == item.url %}
+            {% if page.title == item.title %}
               <li class="active"><a href="{{ item.url }}" class="active">{{ item.title }}</a></li>
             {% else %}
               <li><a href="{{ item.url }}">{{ item.title }}</a></li>
@@ -32,7 +32,7 @@
       </div>
 
     <div class="wrapper">
-{{page.url}}
+{{page.title}}
       <section>
         <div id="title">
           <h1>{{ page.title | site.title | default: site.github.repository_name }}</h1>
