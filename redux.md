@@ -1,4 +1,5 @@
-<div class="jumbotron">
-    <h1>Redux</h1>
-    <p class="lead">Redux does not inherently support asynchronous actions, as stated before. So, we need some other way to accomplish communication with the backend. Thankfully, Redux does support middleware and much middleware has been designed to add asynchronous capability to Redux. We are going to use redux-thunk for simplicity<p>
-</div>
+
+
+# Redux
+
+> Redux does not inherently support asynchronous actions, as stated before. So, we need some other way to accomplish communication with the backend. Thankfully, Redux does support middleware and much middleware has been designed to add asynchronous capability to Redux. We are going to use redux-thunk for simplicity
