@@ -16,7 +16,7 @@ title: Promise
 >
 > The value of this, super, arguments, and new.target inside a function is the nearest containing nonarrow function.
 
-* How Much Use Is There for Arrow Functions?
+> How Much Use Is There for Arrow Functions?
 - Use function in the global scope and for Object.prototype properties
 - Use class for object constructors.
 - Use => everywhere else.
