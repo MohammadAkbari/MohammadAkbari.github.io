@@ -1,6 +1,6 @@
 # CSharp
 
-## Static Constructors</h4>
+## Static Constructors
 > A static constructor does not take access modifiers or have parameters.
 >
 > A static constructor is called automatically to initialize the class before the first instance is created or any static members are referenced.
