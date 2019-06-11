@@ -11,7 +11,7 @@ docs:
   url: elastic
 
 - title: JavaScript
-  url: JavaScript
+  url: js
 
 - title: Kubernetes
   url: kubernetes
