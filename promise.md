@@ -15,7 +15,7 @@ title: Promise
 > Cannot bind a new object to the arrow function.With an arrow function, calls to bind, call, or apply will not be able to change to value of this.
 >
 > The value of this, super, arguments, and new.target inside a function is the nearest containing nonarrow function.
-
+>
 > How Much Use Is There for Arrow Functions?
 - Use function in the global scope and for Object.prototype properties
 - Use class for object constructors.
