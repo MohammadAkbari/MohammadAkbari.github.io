@@ -1,4 +1,6 @@
-# CSharp
+---
+title: CSharp
+---
 
 ## Static Constructors
 > A static constructor does not take access modifiers or have parameters.

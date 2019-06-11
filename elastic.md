@@ -1,4 +1,6 @@
-# Elasticsearch
+---
+title: Elasticsearch
+---
 
 ## Install
 > ./elasticsearch-service.bat install
