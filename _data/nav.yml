@@ -15,13 +15,13 @@ links:
 - title: JavaScript
   url: javascript
 
-- title: Kubernetes
-  url: kubernetes
+- title: Containerzation
+  url: containerzation
 
 - title: Promise
   url: promise
 
-- title: TDD
+- title: Test Driven Development
   url: tdd
 
 - title: Redux
