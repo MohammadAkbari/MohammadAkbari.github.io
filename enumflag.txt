@@ -1,0 +1,35 @@
+        private Expression<Func<WallForumTopic, bool>> WallForumTopicTypePredicate(WallForumTopicType wallForumTopicType)
+        {
+            var options = Enum.GetValues(typeof(WallForumTopicType)).Cast<WallForumTopicType>().Where(e => e != WallForumTopicType.Default).ToList();
+
+            var list = new List<WallForumTopicType>();
+
+            foreach (var item in options)
+            {
+                list.Add(item | wallForumTopicType);
+            }
+
+            var last = list.Last();
+
+            for (int i = 2; i < options.Count(); i++)
+            {
+                var s = options[i];
+
+                var part = new List<WallForumTopicType>();
+
+                foreach (var item in list)
+                {
+                    var next = item | s;
+                    if (!list.Contains(next))
+                    {
+                        part.Add(next);
+                    }
+                }
+
+                list = list.Concat(part).ToList();
+            }
+
+            var types = list.Select(e => e).OrderBy(e => (int)e).ToList();
+
+            return e => types.Contains(e.WallForumTopicType);
+        }
