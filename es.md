@@ -11,16 +11,16 @@ title: JavaScript
 ### sample 1
 ```js
 
-	var add = (function () {
-		var counter = 0;
-		return function () {counter += 1; return counter}
-	})();
+var add = (function () {
+	var counter = 0;
+	return function () {counter += 1; return counter}
+})();
 
-	add();
-	add();
-	add();
+add();
+add();
+add();
 
-	// the counter is now 3
+// the counter is now 3
 ```
 		
 ### sample 2
