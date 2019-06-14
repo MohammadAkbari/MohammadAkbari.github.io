@@ -26,15 +26,28 @@ title: JavaScript
 ### sample 2
 ```js
 
-	function makeAdder(x) {
-		return function(y) {
-			return x + y;
-		};
-	}
+function makeAdder(x) {
+	return function(y) {
+		return x + y;
+	};
+}
 
-	var add5 = makeAdder(5);
-	var add10 = makeAdder(10);
+var add5 = makeAdder(5);
+var add10 = makeAdder(10);
 
-	console.log(add5(2));  // 7
-	console.log(add10(2)); // 12
+console.log(add5(2));  // 7
+console.log(add10(2)); // 12
+```
+
+## call, apply, bind
+
+```js
+
+var product = (x, y) => x * y;
+
+console.log(product.call(null, 2, 3));
+console.log(product.apply(null, [4, 5]));
+var multiply = product.bind(null, 6, 7);
+console.log(multiply ());
+
 ```
