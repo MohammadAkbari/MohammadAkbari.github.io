@@ -10,12 +10,12 @@ title: Design
 >
 > A design is rigid if a single change causes a cascade of subsequent changes in dependent modules.
 >
-> The smell of Rigidity is often a result of insufficient attention to The Open–Closed Principle (OCP).</p>
+> The smell of Rigidity is often a result of insufficient attention to The Open–Closed Principle (OCP).
 
 ### Fragility
 > The design is easy to break.
 >
-> Changes cause the system to break in places that have no conceptual relationship to the part that was changed.</p>
+> Changes cause the system to break in places that have no conceptual relationship to the part that was changed.
 
 ### Immobility
 > The design is hard to reuse.
