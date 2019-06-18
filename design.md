@@ -55,7 +55,7 @@ title: Design
 > Uses inheritance and relies on a subclass to handle the desired object instantiation.
 
 ### Builder
-> The builder pattern is a good choice when designing classes whose constructors or static factories would have more than a handful of parameters.
+> The builder pattern is a good choice when designing classes whose constructors or static factories would have more than a handful of parameters.<b>Telescoping Constructor Pattern</b>
 
 ```csharp
 Pizza(int size) { ... }        
