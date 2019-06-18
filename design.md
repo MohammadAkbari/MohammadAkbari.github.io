@@ -53,3 +53,21 @@ title: Design
 > Implemented by Inheritance
 >
 > Uses inheritance and relies on a subclass to handle the desired object instantiation.
+
+### Builder
+> The builder pattern is a good choice when designing classes whose constructors or static factories would have more than a handful of parameters.
+
+```C#
+Pizza(int size) { ... }        
+Pizza(int size, boolean cheese) { ... }    
+Pizza(int size, boolean cheese, boolean pepperoni) { ... }    
+Pizza(int size, boolean cheese, boolean pepperoni, boolean bacon) { ... }
+
+
+Pizza pizza = new Pizza.Builder(12)
+                       .cheese(true)
+                       .pepperoni(true)
+                       .bacon(true)
+                       .build();
+
+```
