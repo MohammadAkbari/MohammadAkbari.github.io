@@ -57,7 +57,7 @@ title: Design
 ### Builder
 > The builder pattern is a good choice when designing classes whose constructors or static factories would have more than a handful of parameters.
 
-```C#
+```csharp
 Pizza(int size) { ... }        
 Pizza(int size, boolean cheese) { ... }    
 Pizza(int size, boolean cheese, boolean pepperoni) { ... }    
