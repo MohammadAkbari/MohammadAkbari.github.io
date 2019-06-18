@@ -42,6 +42,12 @@ title: Design
 ### Opacity
 > It is hard to read and understand. It does not express its intent well.
 
+## Design Principals
+
+### SRP
+
+
+
 ## Design Patterns
 
 ### Abstract Factory
@@ -71,3 +77,25 @@ Pizza pizza = new Pizza.Builder(12)
                        .build();
 
 ```
+### Composite
+> a specialization of the Decorator pattern 
+>
+> The Composite pattern’s purpose is to allow you to treat many instances of an interface as if they were just one instance.
+	Tree
+
+### Adapter
+> The Adapter pattern enables much of your code to maintain first-party references to interfaces under your direct control, although in reality using a third-party library. (StopwatchAdapter)
+
+### Decorator
+> The Decorator pattern can be applied whenever some of a class’s functionality needs to be removed but it is too tightly coupled with the intent of the class to stand alone. (Lazy decorators)
+
+### Mediator
+> Chat
+
+### Chain of responsibility
+
+## Composition over Inheritance.
+
+> Inheritance, which is whitebox reuse, makes the subclass dependent on the implementation of a class, rather than merely on its interface. 
+>
+> Composition, which is blackbox reuse, limits the dependency to the interface, so that the implementation can vary without adversely affecting clients.
