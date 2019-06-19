@@ -15,6 +15,9 @@
           font-family: 'Helvetica Neue', Helvetica, Arial, serif;
           color:#984e00;
         }
+      .nav-link{
+        color: #1d6480
+      }
     </style>
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -64,9 +67,9 @@
         <nav>
           {% for item in site.data.nav.links %}
             {% if page.title == item.title %}
-              <li class="active"><a href="{{ item.url }}" class="active">{{ item.title }}</a></li>
+              <li class="active"><a href="{{ item.url }}" class="nav-link active">{{ item.title }}</a></li>
             {% else %}
-              <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+              <li><a href="{{ item.url }}" class="nav-link">>{{ item.title }}</a></li>
             {% endif %}
           {% endfor %}
         </nav>
