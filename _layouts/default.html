@@ -16,7 +16,22 @@
           color:#984e00;
         }
       .nav-link{
-        color: #1d6480
+        color: #1d6480;
+        font-size: 14px;
+      }
+      .nav-li {
+          font-weight: bold;
+          margin-top: 5px;
+          display: block;
+          list-style-type: none;
+      }
+      .nav-li:before {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+        background: #1d6480;
       }
     </style>
     <!--[if lt IE 9]>
@@ -67,9 +82,9 @@
         <nav>
           {% for item in site.data.nav.links %}
             {% if page.title == item.title %}
-              <li class="active"><a href="{{ item.url }}" class="nav-link active">{{ item.title }}</a></li>
+              <li class="active nav-li"><a href="{{ item.url }}" class="nav-link active">{{ item.title }}</a></li>
             {% else %}
-              <li><a href="{{ item.url }}" class="nav-link">>{{ item.title }}</a></li>
+              <li class="nav-li"><a href="{{ item.url }}" class="nav-link">{{ item.title }}</a></li>
             {% endif %}
           {% endfor %}
         </nav>
