@@ -11,5 +11,5 @@ title: Containerzation
 
 > bash into a running container: 
 ```
-docker exec -i -t dca6c76bd4e0 /bash
+docker exec -i -t dca6c76bd4e0 /bin/bash
 ```
