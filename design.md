@@ -99,3 +99,21 @@ Pizza pizza = new Pizza.Builder(12)
 > Inheritance, which is whitebox reuse, makes the subclass dependent on the implementation of a class, rather than merely on its interface. 
 >
 > Composition, which is blackbox reuse, limits the dependency to the interface, so that the implementation can vary without adversely affecting clients.
+
+
+## DDD
+> Domain {Sphere of knowledge, Problem space, Multiple subdomains}
+>
+> General subdomain vs Core subdomain
+>
+> Problem space (Subdomain)   <----> Sulotion space (BoundedContext)
+>
+> Domain layer contains the infrastructure independent domain logic.
+>
+> Infrastructure layer provide technology dependent artifacts.
+>
+> Application layer act as a gateway to business logic with integrated transaction control.
+>
+> Aggregate ---> Encapsulation
+>
+> ValueObject ---> Immutable for unwanted side effects.
