@@ -20,3 +20,31 @@ title: C#
 
 ## Exception
 > One issue with the method of throwing when a speaker is not found is that it brings a possibly unexpected and abrupt end to the application flow. The entire logic path the application took to get to this method is now destroyed and the exception must be handled. Even when we handle the exception, C# uses extra CPU cycles on the first-chance exception error handling process. Sometimes throwing is definitely the right decision; however, exceptions should be reserved for truly exceptional events. As discussed earlier, it is far more likely that a Get could be called with an invalid ID than with a valid one. So, in this case it is not necessarily a properly exceptional event for an invalid speaker to be requested
+
+## Linq Extension
+
+```C#
+public static class DelegatePredicateBuilder
+{
+    public static Func<T, bool> True<T>() { return f => true; }
+    public static Func<T, bool> False<T>() { return f => false; }
+
+    public static Func<T, bool> Or<T>(this Func<T, bool> expr1,
+                                    Func<T, bool> expr2)
+    {
+        return t => expr1(t) || expr2(t);
+    }
+
+    public static Func<T, bool> And<T>(this Func<T, bool> expr1,
+                                            Func<T, bool> expr2)
+    {
+        return t => expr1(t) && expr2(t);
+    }
+}
+```
+## Interface
+> An interface defines the behavior that a class has, but not  how  this behavior is implemented
+
+## Settings
+> A developer should be aware of the practice that all the environment-related settings
+should go into appsettings.json, and any setting related to C# code should go into the Constants class.

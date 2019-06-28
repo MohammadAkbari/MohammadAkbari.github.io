@@ -85,6 +85,9 @@ Pizza pizza = new Pizza.Builder(12)
 
 ### Adapter
 > The Adapter pattern enables much of your code to maintain first-party references to interfaces under your direct control, although in reality using a third-party library. (StopwatchAdapter)
+>
+> By implementing an adapter for Log4Net, you need not reference it in every assembly.
+
 
 ### Decorator
 > The Decorator pattern can be applied whenever some of a class’s functionality needs to be removed but it is too tightly coupled with the intent of the class to stand alone. (Lazy decorators)
@@ -94,6 +97,12 @@ Pizza pizza = new Pizza.Builder(12)
 
 ### Chain of responsibility
 
+### Strategy
+> Dependency Injection is a special use of the Strategy Pattern.
+
+### Unit of Work
+> The Unit of Work pattern is used to group one or more operations (usually database operations) into a single transaction, or unit of work, so that all operations either pass or fail as one batch.
+
 ## Composition over Inheritance.
 
 > Inheritance, which is whitebox reuse, makes the subclass dependent on the implementation of a class, rather than merely on its interface. 
@@ -102,6 +111,8 @@ Pizza pizza = new Pizza.Builder(12)
 
 
 ## DDD
+> In brief, Evans introduces this concept as a way to decompose a large, complex system into more manageable pieces; a large system is composed of multiple bounded contexts.
+>
 > Domain {Sphere of knowledge, Problem space, Multiple subdomains}
 >
 > General subdomain vs Core subdomain
@@ -117,3 +128,4 @@ Pizza pizza = new Pizza.Builder(12)
 > Aggregate ---> Encapsulation
 >
 > ValueObject ---> Immutable for unwanted side effects.
+
