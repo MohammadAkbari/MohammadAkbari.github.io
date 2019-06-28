@@ -1,5 +1,5 @@
 ---
-title: Containerzation
+title: Containerization
 ---
 
 ![images/kubectl_deployment](images/kubectl_deployment.jpg){: .center-image }
