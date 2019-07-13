@@ -23,5 +23,6 @@ docker run --name kubia-container -p 8080:8080 -d kubia
 ## Kubernetes
 
 ### Commands
-
-> kubeadm token create --print-join-command
+```
+kubeadm token create --print-join-command
+```
