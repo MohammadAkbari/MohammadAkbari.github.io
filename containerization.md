@@ -18,3 +18,10 @@ docker exec -i -t dca6c76bd4e0 /bin/bash
 ```
 docker run --name kubia-container -p 8080:8080 -d kubia
 ```
+
+
+## Kubernetes
+
+### Commands
+
+> kubeadm token create --print-join-command
