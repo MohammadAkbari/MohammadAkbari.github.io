@@ -1,5 +1,5 @@
 ---
-title: EntityFramwork
+title: EntityFramework
 ---
 
 ```
