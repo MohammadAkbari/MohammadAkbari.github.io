@@ -5,6 +5,9 @@ links:
 
 - title: C#
   url: csharp
+  
+  - title: EntityFramework
+  url: ef
 
 - title: Design
   url: design
