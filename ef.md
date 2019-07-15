@@ -1,3 +1,7 @@
+---
+title: EntityFramwork
+---
+
 ```
 public class ApplicationDbContext : DbContext
 {
