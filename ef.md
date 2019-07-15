@@ -5,13 +5,14 @@ title: EntityFramwork
 ```
 public class ApplicationDbContext : DbContext
 {
+    string _connection = "Data Source=.;Initial Catalog=App;Integrated Security=true;";
     public DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=App;Integrated Security=true;");
+            optionsBuilder.UseSqlServer(_connection);
         }
     }
 
