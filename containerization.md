@@ -32,6 +32,9 @@ kubectl exec ${POD_NAME} -c ${CONTAINER_NAME} -- ${CMD} ${ARG1} ${ARG2} ... ${AR
 ```
 kubectl get endpoints
 ```
+```
+kubectl rollout <restart, status, undo> deployment sample-dep
+```
 
 ## Linux
 
