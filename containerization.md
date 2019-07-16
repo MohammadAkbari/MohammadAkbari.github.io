@@ -29,6 +29,9 @@ kubeadm token create --print-join-command
 ```
 kubectl exec ${POD_NAME} -c ${CONTAINER_NAME} -- ${CMD} ${ARG1} ${ARG2} ... ${ARGN}
 ```
+```
+kubectl get endpoints
+```
 
 ## Linux
 
