@@ -25,6 +25,7 @@ docker run --name kubia-container -p 8080:8080 -d kubia
 ### Commands
 ```
 kubeadm token create --print-join-command
+sudo kubeadm reset
 ```
 ```
 kubectl exec ${POD_NAME} -c ${CONTAINER_NAME} -- ${CMD} ${ARG1} ${ARG2} ... ${ARGN}
