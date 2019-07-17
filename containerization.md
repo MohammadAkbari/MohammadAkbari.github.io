@@ -43,3 +43,8 @@ kubectl rollout <restart, status, undo> deployment sample-dep
 sudo apt install openssh-server
 sudo systemctl status ssh
 ```
+### Missing network connection
+```
+sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
+sudo systemctl restart NetworkManager
+```
