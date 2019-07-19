@@ -2,7 +2,7 @@
 title: Design
 ---
 
-![images/framework vs library](images/framework-vs-library.png){: .center-image }
+![framework vs library](images/framework-vs-library.png){: .center-image }
 
 ## Code Smell (Design Smells)
 > Agile teams apply principles to remove smells. They don’t apply principles when there are no smells. It is a mistake to unconditionally conform to a principle just because it is a principle. Principles are not a perfume to be liberally scattered all over the system. Overconformance to the principles leads to the design smell of Needless Complexity.
