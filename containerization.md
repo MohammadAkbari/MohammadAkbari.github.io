@@ -36,6 +36,9 @@ kubectl get endpoints
 ```
 kubectl rollout <restart, status, undo> deployment sample-dep
 ```
+```
+kubectl config view --raw -o json
+```
 
 ## Linux
 
