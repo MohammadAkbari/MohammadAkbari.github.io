@@ -10,6 +10,8 @@ sudo systemctl status ssh
 ```
 sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
 sudo systemctl restart NetworkManager
+
+sudo nmcli networking on
 ```
 ## Can't start GUI
 ```
