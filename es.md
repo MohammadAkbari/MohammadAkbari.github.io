@@ -56,7 +56,7 @@ console.log(multiply ());
 ```js
 
 (function ($) {
-    var url1 = "";
+    var url = "";
     $.ajax({
         type: "GET",
         url: url,
