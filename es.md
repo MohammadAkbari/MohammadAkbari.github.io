@@ -51,6 +51,22 @@ var multiply = product.bind(null, 6, 7);
 console.log(multiply ());
 
 ```
+## ajax call
+
+```js
+
+(function ($) {
+    var url1 = "";
+    $.ajax({
+        type: "GET",
+        url: url,
+        dataType: "json"
+    }).done(function (response) {
+    }).fail(function (response) {
+    });
+})(jQuery);
+
+```
 
 ## Promise
 
