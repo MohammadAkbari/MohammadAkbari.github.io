@@ -40,6 +40,16 @@ kubectl rollout <restart, status, undo> deployment sample-dep
 kubectl config view --raw -o json
 ```
 
+## DevOps
+
+> Deployment is a combination of two interrelated concepts: process and architecture.
+>
+> The adoption of DevOps means that the development team is also responsible for deploying their application or services.
+>
+> In some organizations, operations provides developers with a console for deploying their code. Or, better yet, once the tests pass, the deployment pipeline automatically deploys the code into production.
+
+> If you want to deploy microservices at scale, you need a highly automated deployment process and infrastructure.
+
 ## Linux
 
 ### SSH
