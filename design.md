@@ -52,6 +52,8 @@ title: Design
 
 ## Design Patterns
 
+> A pattern is a reusable solution to a problem that occurs in a particular context.
+
 ### Abstract Factory
 > Implemented by Composition
 >
