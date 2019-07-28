@@ -19,3 +19,9 @@ sudo apt install lightdm
 sudo dpkg-reconfigure lightdm   
 sudo reboot
 ```
+
+## Firewall
+
+```
+sudo ufw allow from any to any port 10000 proto tcp
+```
