@@ -48,3 +48,8 @@ public static class DelegatePredicateBuilder
 ## Settings
 > A developer should be aware of the practice that all the environment-related settings
 should go into appsettings.json, and any setting related to C# code should go into the Constants class.
+
+## dotnet publish
+```
+dotnet publish -c release -r win10-x64
+```
