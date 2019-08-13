@@ -49,22 +49,3 @@ kubectl config view --raw -o json
 > In some organizations, operations provides developers with a console for deploying their code. Or, better yet, once the tests pass, the deployment pipeline automatically deploys the code into production.
 
 > If you want to deploy microservices at scale, you need a highly automated deployment process and infrastructure.
-
-## Linux
-
-### SSH
-```
-sudo apt install openssh-server
-sudo systemctl status ssh
-```
-### Missing network connection
-```
-sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
-sudo systemctl restart NetworkManager
-```
-### Can't start GUI
-```
-sudo apt install lightdm  
-sudo dpkg-reconfigure lightdm   
-sudo reboot
-```
