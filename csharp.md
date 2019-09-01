@@ -53,3 +53,18 @@ should go into appsettings.json, and any setting related to C# code should go in
 ```
 dotnet publish -c release -r win10-x64
 ```
+
+## HttpClient Proxy
+```
+var proxy = new WebProxy
+{
+    Address = new Uri("http://ip:port")
+};
+
+var httpClientHandler = new HttpClientHandler
+{
+    Proxy = proxy,
+};
+
+var client = new HttpClient(handler: httpClientHandler, disposeHandler: true);
+```
