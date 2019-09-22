@@ -18,6 +18,8 @@ title: C#
 >
 > If you have many tasks that take more than a few hundred milliseconds to execute, the thread pool will not be as effective.
 >
+> For GUI programs, asynchronous programming frees up the UI thread; this permits the GUI application to remain responsive to user input. 
+> For server applications, asynchronous programming frees up request threads; this permits the server to use its threads to serve more requests.
 ## SynchronizationContext
 > SynchronizationContext was designed for ASP.NET to manage this process, here are the most important aspects of its work:
 > * Provides a way to queue a unit of work to a context
