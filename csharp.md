@@ -17,6 +17,17 @@ title: C#
 > The clock interval is about 15 milliseconds on current multiprocessor systems.
 >
 > If you have many tasks that take more than a few hundred milliseconds to execute, the thread pool will not be as effective.
+>
+### SynchronizationContext
+> SynchronizationContext was designed for ASP.NET to manage this process, here are the most important aspects of its work:
+> * Provides a way to queue a unit of work to a context
+> * Every thread has a "current" context
+> * Keeps a count of outstanding asynchronous operations
+### Without SynchronizationContext
+> * Task continuations are queued against the thread pool and can run in parallel
+> * HttpContext is not thread safe!
+> * No deadlocks if you block a Task with Task.Wait or Task.Result
+
 
 ## Exception
 > One issue with the method of throwing when a speaker is not found is that it brings a possibly unexpected and abrupt end to the application flow. The entire logic path the application took to get to this method is now destroyed and the exception must be handled. Even when we handle the exception, C# uses extra CPU cycles on the first-chance exception error handling process. Sometimes throwing is definitely the right decision; however, exceptions should be reserved for truly exceptional events. As discussed earlier, it is far more likely that a Get could be called with an invalid ID than with a valid one. So, in this case it is not necessarily a properly exceptional event for an invalid speaker to be requested
