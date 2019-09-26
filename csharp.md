@@ -65,9 +65,11 @@ should go into appsettings.json, and any setting related to C# code should go in
 ## dotnet publish
 ```
 dotnet publish -c release -r win10-x64
+
+dotnet publish -c Release --self-contained -r ubuntu.18.04-x64
 ```
 
-##
+## stdoutLogFile
 ```
 <aspNetCore processPath="dotnet" arguments=".\WebApplication1.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout" hostingModel="InProcess" />
 ```
