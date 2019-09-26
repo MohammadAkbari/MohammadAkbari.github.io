@@ -25,3 +25,8 @@ sudo reboot
 ```
 sudo ufw allow from any to any port 10000 proto tcp
 ```
+
+## Copy folder
+```
+cp -a /source/. /dest/
+```
