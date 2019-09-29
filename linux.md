@@ -30,3 +30,8 @@ sudo ufw allow from any to any port 10000 proto tcp
 ```
 cp -a /source/. /dest/
 ```
+
+## Other
+```
+sudo chown k-master:k-master /var/www/web1
+```
