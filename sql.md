@@ -2,7 +2,7 @@
 title: Sql Server
 ---
 ## Number of Connections
-```
+```sql
 SELECT 
     DB_NAME(dbid) as DBName, 
     COUNT(dbid) as NumberOfConnections,
@@ -16,7 +16,7 @@ GROUP BY
 ```
 
 ## Top queries consuming High CPU [refrence](https://blogs.msdn.microsoft.com/docast/2017/07/30/sql-high-cpu-troubleshooting-checklist/)
-```
+```sql
 SELECT
   s.session_id,
   r.status,
