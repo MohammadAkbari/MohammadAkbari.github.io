@@ -22,7 +22,7 @@ SELECT
   r.status,
   r.blocking_session_id 'Blk by',
   r.wait_type,
-  wait_resource,
+  r.wait_resource,
   r.wait_time / (1000 * 60) 'Wait M',
   r.cpu_time,
   r.logical_reads,
