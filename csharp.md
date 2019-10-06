@@ -21,13 +21,13 @@ title: C#
 > For GUI programs, asynchronous programming frees up the UI thread; this permits the GUI application to remain responsive to user input. 
 > For server applications, asynchronous programming frees up request threads; this permits the server to use its threads to serve more requests.
 
-## SynchronizationContext
+### SynchronizationContext
 > SynchronizationContext was designed for ASP.NET to manage this process, here are the most important aspects of its work:
 > * Provides a way to queue a unit of work to a context
 > * Every thread has a "current" context
 > * Keeps a count of outstanding asynchronous operations
 
-## Without SynchronizationContext
+### Without SynchronizationContext
 > * Task continuations are queued against the thread pool and can run in parallel
 > * HttpContext is not thread safe!
 > * No deadlocks if you block a Task with Task.Wait or Task.Result
