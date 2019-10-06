@@ -36,7 +36,7 @@ title: C#
 
 ## Linq Extension
 
-```C#
+```csharp
 public static class DelegatePredicateBuilder
 {
     public static Func<T, bool> True<T>() { return f => true; }
@@ -75,7 +75,7 @@ dotnet publish -c Release --self-contained -r ubuntu.18.04-x64
 ```
 
 ## HttpClient Proxy
-```
+```csharp
 var proxy = new WebProxy
 {
     Address = new Uri("http://ip:port")
