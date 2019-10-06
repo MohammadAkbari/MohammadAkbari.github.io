@@ -90,3 +90,27 @@ var httpClientHandler = new HttpClientHandler
 
 var client = new HttpClient(handler: httpClientHandler, disposeHandler: true);
 ```
+
+## Pass Func with variable number of arguments 
+
+```csharp
+protected ValidationResult Validate(params Func<ValidationResult>[] items)
+{
+    var validationResult = new ValidationResult();
+
+    foreach(var item in items)
+    {
+        validationResult = item();
+
+        if (!validationResult.IsValid)
+        {
+            return validationResult;
+        }
+    }
+
+    return validationResult;
+}
+
+var validationResult = Validate(() => Validate1(a), () => Validate2(a, b));
+
+```
