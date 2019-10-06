@@ -15,7 +15,7 @@ GROUP BY
     dbid, loginame
 ```
 
-## Top queries consuming High CPU [refrence](#https://blogs.msdn.microsoft.com/docast/2017/07/30/sql-high-cpu-troubleshooting-checklist/)
+## Top queries consuming High CPU [refrence](https://blogs.msdn.microsoft.com/docast/2017/07/30/sql-high-cpu-troubleshooting-checklist/)
 ```
 SELECT
   s.session_id,
