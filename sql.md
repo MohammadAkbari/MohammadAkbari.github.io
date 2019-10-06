@@ -51,7 +51,7 @@ CROSS APPLY sys.Dm_exec_sql_text(r.sql_handle) AS st
 WHERE r.session_id != @@SPID
 ORDER BY r.cpu_time DESC
 ```
-
+##  Check/Change Isolation Level
 ```sql
 DBCC USEROPTIONS
 
