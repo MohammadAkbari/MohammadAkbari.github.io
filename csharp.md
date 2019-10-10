@@ -22,6 +22,10 @@ title: C#
 > For server applications, asynchronous programming frees up request threads; this permits the server to use its threads to serve more requests.
 >
 > <b>Multithreading</b>: A form of concurrency that uses multiple threads of execution.
+> 
+> <b>Parallel processing</b>: Doing lots of work by dividing it up among multiple threads that run concurrently.
+> 
+> <b>Asynchronous programming</b>: A form of concurrency that uses futures(promise) or callbacks to avoid unnecessary threads.
 
 ### SynchronizationContext
 > SynchronizationContext was designed for ASP.NET to manage this process, here are the most important aspects of its work:
