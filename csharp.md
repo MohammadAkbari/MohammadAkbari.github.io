@@ -27,13 +27,12 @@ title: C#
 > 
 > <b>Asynchronous programming</b>: A form of concurrency that uses futures(promise) or callbacks to avoid unnecessary threads.
 
-### SynchronizationContext
-> SynchronizationContext was designed for ASP.NET to manage this process, here are the most important aspects of its work:
+> <b>SynchronizationContext</b> was designed for ASP.NET to manage this process, here are the most important aspects of its work:
 > * Provides a way to queue a unit of work to a context
 > * Every thread has a "current" context
 > * Keeps a count of outstanding asynchronous operations
 
-### Without SynchronizationContext
+> <b>Without SynchronizationContext</b>
 > * Task continuations are queued against the thread pool and can run in parallel
 > * HttpContext is not thread safe!
 > * No deadlocks if you block a Task with Task.Wait or Task.Result
