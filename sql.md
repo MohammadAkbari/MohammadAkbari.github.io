@@ -61,7 +61,6 @@ ALTER DATABASE [DB_NAME] SET MULTI_USER
 ```
 ## TempDB
 
-```
 > The tempdb system database is a global resource that is available to all users connected to the instance of SQL Server and is used to hold the following:
 >
 > Temporary user objects that are explicitly created, such as: global or local temporary tables, temporary stored procedures, table variables, or cursors.
@@ -75,4 +74,3 @@ ALTER DATABASE [DB_NAME] SET MULTI_USER
 > Operations within tempdb are minimally logged. This enables transactions to be rolled back. tempdb is re-created every time SQL Server is started so that the system always starts with a clean copy of the database. Temporary tables and stored procedures are dropped automatically on disconnect, and no connections are active when the system is shut down. Therefore, there is never anything in tempdb to be saved from one session of SQL Server to another. Backup and restore operations are not allowed on tempdb.
 >
 > So for the vast majority of implementations, leaving tempdb where it is with all the default settings is fine.  But with databases that have stored procs or other code creating lots of temporary variables, cursors, and so forth, need to put tempdb on its own disk and treat it more like the transaction log.
-```
