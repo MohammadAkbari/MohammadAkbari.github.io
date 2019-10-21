@@ -119,3 +119,8 @@ protected ValidationResult Validate(params Func<ValidationResult>[] items)
 var validationResult = Validate(() => Validate1(a), () => Validate2(a, b));
 
 ```
+
+## Notes
+
+> ternary conditional operator
+> null-coalescing operator
