@@ -5,6 +5,8 @@ title: Design
 ## Cohesion, Coupling
 > Gather together the things that change for the same reasons. Separate those things that change for different reasons.
 
+## Framework vs Library
+
 ![framework vs library](images/framework-vs-library.png){: .center-image }
 
 ## Code Smell (Design Smells)
