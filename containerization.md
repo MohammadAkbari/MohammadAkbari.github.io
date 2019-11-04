@@ -1,6 +1,10 @@
 ---
 title: Containerization
 ---
+## container
+> A container is an operating system-level virtualization method that supports running isolated systems on a host, each with its own network and process space, sharing the same kernel. A container is quicker to build and quicker to start up than a virtual machine (seconds, rather than minutes)
+
+## Kubectl Deployment
 
 ![images/kubectl_deployment](images/kubectl_deployment.jpg){: .center-image }
 
