@@ -35,3 +35,6 @@ cp -a /source/. /dest/
 ```
 sudo chown k-master:k-master /var/www/web1
 ```
+```
+sudo visudo
+```
