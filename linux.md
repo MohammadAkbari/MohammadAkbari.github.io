@@ -6,6 +6,12 @@ title: Linux
 sudo apt install openssh-server
 sudo systemctl status ssh
 ```
+### Disable SWAP
+```
+sudo swapon -s
+sudo swapoff -a
+```
+
 ## Missing network connection
 ```
 sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
