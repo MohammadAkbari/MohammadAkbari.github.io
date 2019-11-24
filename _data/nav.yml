@@ -9,6 +9,9 @@ links:
 - title: EntityFramework
   url: ef
 
+- title: Identity Server
+  url: identity
+
 - title: Design
   url: design
 
