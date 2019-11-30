@@ -2,6 +2,9 @@
 title: Design
 ---
 
+## Architecting software
+> Architecting software always involves tension between pragmatism and idealism — balancing product needs, the pressures of growth, and the capabilities of a team.
+
 ## Cohesion, Coupling
 > Gather together the things that change for the same reasons. Separate those things that change for different reasons.
 
