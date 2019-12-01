@@ -27,3 +27,5 @@ middleware (based on the AMQP protocol).
 > backends for frontends
 >
 > consumer-driven gateways
+>
+![images/api-gateway](images/api-gateway.JPG){: .center-image }
