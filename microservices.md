@@ -20,3 +20,10 @@ workload in the way you expect.
 > Kafka specializes in high-volume,
 replayable event storage, whereas RabbitMQ provides higher level messaging
 middleware (based on the AMQP protocol).
+
+## Patterns for application boundaries:
+> API gateways
+>
+> backends for frontends
+>
+> consumer-driven gateways
