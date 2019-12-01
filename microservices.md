@@ -16,3 +16,7 @@ workload in the way you expect.
 >
 > Fault tolerance — Have you mitigated single points of failure? How do you cope with the failure of other service dependencies?
 
+## Communication broker
+> Kafka specializes in high-volume,
+replayable event storage, whereas RabbitMQ provides higher level messaging
+middleware (based on the AMQP protocol).
