@@ -24,8 +24,8 @@ middleware (based on the AMQP protocol).
 ## Patterns for application boundaries:
 > API gateways
 >
-> backends for frontends
+> Backends for frontends
 >
-> consumer-driven gateways
+> Consumer-driven gateways (GraphQL)
 >
 ![images/api-gateway](images/api-gateway.JPG){: .center-image }
