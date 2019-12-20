@@ -59,6 +59,8 @@ title: Design
 ### OCP
 > It should be possible to change the behavior of a method without editing its source code.
 
+![ocp](images/ocp.jpg){: .center-image }
+
 ## Design Patterns
 
 > A pattern is a reusable solution to a problem that occurs in a particular context.
