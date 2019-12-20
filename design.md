@@ -73,7 +73,7 @@ title: Design
 ### DIP
 > High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g. interfaces).
 >
-> Abstractions should not depend on details. Details (concrete implementations) should depend on abstractions.
+> Abstractions(what) should not depend on details(how). Details (concrete implementations) should depend on abstractions.
 
 ## Design Patterns
 
