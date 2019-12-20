@@ -56,7 +56,8 @@ title: Design
 
 ### SRP
 
-
+### OCP
+> It should be possible to change the behavior of a method without editing its source code.
 
 ## Design Patterns
 
