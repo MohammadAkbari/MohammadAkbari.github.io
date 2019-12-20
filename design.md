@@ -58,6 +58,7 @@ title: Design
 
 ### OCP
 > It should be possible to change the behavior of a method without editing its source code.
+> Approaches: Parameters, Inheritance, Composition(Injection)
 
 ![ocp](images/ocp.jpg){: .center-image }
 
