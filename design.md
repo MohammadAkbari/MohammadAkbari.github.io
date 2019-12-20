@@ -63,6 +63,13 @@ title: Design
 
 ![ocp](images/ocp.jpg){: .center-image }
 
+### LSP
+> Type checking
+>
+> Null checking
+>
+? NotImplementedException
+
 ## Design Patterns
 
 > A pattern is a reusable solution to a problem that occurs in a particular context.
