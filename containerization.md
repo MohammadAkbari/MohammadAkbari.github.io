@@ -17,6 +17,10 @@ title: Containerization
 ```
 docker exec -i -t dca6c76bd4e0 /bin/bash
 ```
+> bash into a running pod
+```
+kubectl exec -it <POD NAME> -- /bin/bash
+```
 
 > Run container
 ```
