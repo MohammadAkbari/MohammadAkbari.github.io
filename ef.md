@@ -33,3 +33,13 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
 }
 
 ```
+
+```
+
+services.AddDbContextPool<NorthwindContext>(options =>options
+        .UseSqlServer(Configuration.GetConnectionString("Default"))
+        .ConfigureWarnings(x => x.Throw(RelationalEventId.QueryPossibleUnintendedUseOfEqualsWarning))
+        .EnableSensitiveDataLogging(_environment.IsDevelopment())
+        .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
+
+```
