@@ -44,3 +44,8 @@ sudo chown k-master:k-master /var/www/web1
 ```
 sudo visudo
 ```
+## Log request
+```
+sudo tcpdump -ni any port 80 -vv -s0 -w http.pcap
+```
+
