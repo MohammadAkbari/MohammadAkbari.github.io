@@ -48,4 +48,5 @@ sudo visudo
 ```
 sudo tcpdump -ni any port 80 -vv -s0 -w http.pcap
 ```
-
+## Chrome
+chrome://net-internals/#hsts
