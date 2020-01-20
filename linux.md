@@ -49,5 +49,4 @@ sudo visudo
 sudo tcpdump -ni any port 80 -vv -s0 -w http.pcap
 ```
 ## Chrome
-[a link](chrome://net-internals/#hsts)
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
+<a href="chrome://net-internals/#hsts">chrome hsts</a>
