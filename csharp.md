@@ -125,3 +125,8 @@ var validationResult = Validate(() => Validate1(a), () => Validate2(a, b));
 > ternary conditional operator
 >
 > null-coalescing operator
+
+## SET Environment Variable
+```
+Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Development");
+```
