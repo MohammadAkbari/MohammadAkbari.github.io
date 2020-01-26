@@ -21,6 +21,9 @@ links:
 - title: Elasticsearch
   url: elastic
 
+- title: Redis
+  url: redis
+  
 - title: JavaScript
   url: es
 
