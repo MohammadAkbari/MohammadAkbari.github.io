@@ -130,3 +130,9 @@ var validationResult = Validate(() => Validate1(a), () => Validate2(a, b));
 ```
 Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Development");
 ```
+## Install Windows Service
+```
+sc.exe create Service1 binPath= "C:\...\Service1.exe" start= auto
+sc.exe start Service1
+```
+
