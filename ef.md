@@ -5,7 +5,7 @@ title: EntityFramework
 ```
 public class ApplicationDbContext : DbContext
 {
-    string _connection = "Data Source=.;Initial Catalog=App;Integrated Security=true;";
+    string _connection = "Data Source=.;Initial Catalog=App;Integrated Security=true;Application Name=MyApplication";
     public DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
