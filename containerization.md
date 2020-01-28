@@ -26,7 +26,9 @@ kubectl exec -it <POD NAME> -- /bin/bash
 ```
 docker run --name kubia-container -p 8080:8080 -d kubia
 ```
-
+```
+docker build git://github.com/MohammadAkbari/kubesail.git#master:Client1
+```
 
 ## Kubernetes
 
