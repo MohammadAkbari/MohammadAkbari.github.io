@@ -43,3 +43,6 @@ services.AddDbContextPool<NorthwindContext>(options =>options
         .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
 
 ```
+```
+var connectionString = ctx.Database.GetDbConnection().ConnectionString;
+```
