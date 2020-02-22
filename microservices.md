@@ -29,3 +29,5 @@ middleware (based on the AMQP protocol).
 > Consumer-driven gateways (GraphQL)
 >
 ![images/api-gateway](images/api-gateway.JPG){: .center-image }
+
+> Saga: A sequence of local transactions coordinated through asynchronous messaging.
