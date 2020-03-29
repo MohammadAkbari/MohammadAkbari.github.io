@@ -135,4 +135,9 @@ Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Development");
 sc.exe create Service1 binPath= "C:\...\Service1.exe" start= auto
 sc.exe start Service1
 ```
-
+###
+```
+<appSettings>
+	<add key="aspnet:UseHostHeaderForRequestUrl" value="true" />
+</appSettings>
+```
