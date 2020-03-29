@@ -33,6 +33,10 @@ docker run --name kubia-container -p 8080:8080 -d kubia
 ```
 docker build git://github.com/MohammadAkbari/kubesail.git#master:Client1
 ```
+> nano
+```
+RUN apt-get update && apt-get install -y nano --no-install-recommends apt-utils
+```
 
 ## Kubernetes
 
