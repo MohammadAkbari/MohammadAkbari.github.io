@@ -91,3 +91,14 @@ COPY --from=publish /app/publish .
 
 ENTRYPOINT ["dotnet", "Api1.dll"]
 ```
+### .dockerignore
+```
+# directories
+**/bin/
+**/obj/
+**/out/
+
+# files
+Dockerfile*
+**/*.md
+```
