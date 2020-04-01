@@ -67,3 +67,27 @@ kubectl config view --raw -o json
 > In some organizations, operations provides developers with a console for deploying their code. Or, better yet, once the tests pass, the deployment pipeline automatically deploys the code into production.
 
 > If you want to deploy microservices at scale, you need a highly automated deployment process and infrastructure.
+
+## Dockerfile .Net core
+```
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+#WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+WORKDIR /src
+COPY ["Api1.csproj", "./"]
+RUN dotnet restore "Api1.csproj"
+COPY . .
+#RUN dotnet build "Api1.csproj" -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish "Api1.csproj" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+ENTRYPOINT ["dotnet", "Api1.dll"]
+```
