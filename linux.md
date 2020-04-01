@@ -54,3 +54,14 @@ chrome://net-internals/#hsts
 ## Firefox
 about:config
 security.mixed_content.block_active_content
+
+## Repeat command
+```
+while true; do curl 0.0.0.0:8090 ; sleep 5; done
+```
+## Nginx
+```
+nginx -s reload
+service haproxy restart
+systemctl restart nginx
+```
