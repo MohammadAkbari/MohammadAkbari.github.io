@@ -31,3 +31,8 @@ middleware (based on the AMQP protocol).
 ![images/api-gateway](images/api-gateway.JPG){: .center-image }
 
 > Saga: A sequence of local transactions coordinated through asynchronous messaging.
+
+## Handle duplicate messages
+> Write idempotent message handlers.
+>
+> Track messages and discard duplicates.
