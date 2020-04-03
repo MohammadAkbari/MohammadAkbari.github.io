@@ -9,3 +9,5 @@ title: REST API
 > [github repos](https://developer.github.com/v3/repos/)
 >
 > [crunchbase](https://rapidapi.com/crunchbase-team1-crunchbase/api/crunchbase)
+>
+> [paypal](https://developer.paypal.com/docs/api/reference/api-responses/#authorization-errors)
