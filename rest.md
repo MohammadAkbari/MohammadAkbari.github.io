@@ -2,4 +2,6 @@
 title: REST API
 ---
 
-[REST API Sample](https://api.github.com/users/MohammadAkbari)
+> [Sample1](https://api.github.com/users/MohammadAkbari)
+>
+> [Samples](https://developer.github.com/v3/repos/)
