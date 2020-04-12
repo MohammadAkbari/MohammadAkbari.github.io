@@ -59,6 +59,16 @@ ALTER DATABASE [DB_NAME] SET SINGLE_USER WITH ROLLBACK [IMMEDIATE|AFTER 30 SECON
 ALTER DATABASE [DB_NAME] SET READ_COMMITTED_SNAPSHOT ON
 ALTER DATABASE [DB_NAME] SET MULTI_USER
 ```
+## Table Variable
+```sql
+DECLARE @PhoneNumbers table (PhoneNumber NVARCHAR(15))
+
+INSERT INTO @PhoneNumbers VALUES
+('1'),
+('2'),
+('3')
+```
+
 ## TempDB
 
 > The tempdb system database is a global resource that is available to all users connected to the instance of SQL Server and is used to hold the following:
