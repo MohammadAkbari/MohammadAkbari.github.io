@@ -16,3 +16,8 @@ EVAL "return #redis.pcall('KEYS','ads:*')" 0
 ```
 SCARD key
 ```
+## Delete Pattern
+```
+redis-cli --scan --pattern users:* | xargs redis-cli del
+redis-cli --scan --pattern users:* | xargs redis-cli unlink
+```
