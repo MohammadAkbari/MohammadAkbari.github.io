@@ -30,5 +30,5 @@ var stringResponse = await _elasticLowLevelClient.DoRequestAsync<StringResponse>
 		CancellationToken.None,
 		PostData.String(raw));
 
-var t = JsonSerializer.Deserialize<>(stringResponse.Body);
+var output = JsonSerializer.Deserialize<>(stringResponse.Body);
 ```
