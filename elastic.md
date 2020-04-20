@@ -32,3 +32,6 @@ var stringResponse = await _elasticLowLevelClient.DoRequestAsync<StringResponse>
 
 var output = JsonSerializer.Deserialize<>(stringResponse.Body);
 ```
+```
+var json = _elasticClient.RequestResponseSerializer.SerializeToString(search);
+```
