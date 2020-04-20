@@ -19,3 +19,16 @@ GET my_index/_analyze
 }
 
 ```
+
+###  NEST
+``` C#
+var raw = "{\"query\":{}}";
+
+var stringResponse = await _elasticLowLevelClient.DoRequestAsync<StringResponse>(
+		Elasticsearch.Net.HttpMethod.POST,
+		"_search",
+		CancellationToken.None,
+		PostData.String(raw));
+
+var t = JsonSerializer.Deserialize<>(stringResponse.Body);
+```
