@@ -81,3 +81,24 @@ INSERT INTO @PhoneNumbers VALUES
 > Operations within tempdb are minimally logged. This enables transactions to be rolled back. tempdb is re-created every time SQL Server is started so that the system always starts with a clean copy of the database. Temporary tables and stored procedures are dropped automatically on disconnect, and no connections are active when the system is shut down. Therefore, there is never anything in tempdb to be saved from one session of SQL Server to another. Backup and restore operations are not allowed on tempdb.
 >
 > So for the vast majority of implementations, leaving tempdb where it is with all the default settings is fine.  But with databases that have stored procs or other code creating lots of temporary variables, cursors, and so forth, need to put tempdb on its own disk and treat it more like the transaction log.
+
+## Cursor
+```sql
+DECLARE @Id BIGINT
+DECLARE @Title NVARCHAR(50)
+
+DECLARE cur CURSOR FOR SELECT Id, Title FROM dbo.Category
+
+OPEN cur
+
+FETCH NEXT FROM cur INTO @Id, @Title
+
+WHILE @@FETCH_STATUS = 0 BEGIN
+ 
+	PRINT CAST(@Id AS NVARCHAR(10))+ '...' + @Title
+	FETCH NEXT FROM cur INTO @Id, @Title
+END
+
+CLOSE cur    
+DEALLOCATE cur
+```
