@@ -19,7 +19,12 @@ docker run --name [container-name] -p [8080:80] -d [docker-image:tag]
 ```
 > bash into a running container: 
 ```
-docker exec -i -t dca6c76bd4e0 /bin/bash
+docker exec -it dca6c76bd4e0 /bin/bash
+```
+> inspect
+```
+docker image inspect web:latest
+docker image history web:latest
 ```
 > bash into a running pod
 ```
