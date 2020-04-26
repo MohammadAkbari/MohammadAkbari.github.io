@@ -26,17 +26,9 @@ docker exec -it dca6c76bd4e0 /bin/bash
 docker image inspect web:latest
 docker image history web:latest
 ```
-> bash into a running pod
-```
-kubectl exec -it <POD NAME> -- /bin/bash
-```
-
 > Run container
 ```
-docker run --name kubia-container -p 8080:8080 -d kubia
-```
-```
-docker build git://github.com/MohammadAkbari/kubesail.git#master:Client1
+docker build git://github.com/MohammadAkbari/kubesail.git#master:Client1 [--nocache=true]
 ```
 > nano
 ```
@@ -50,6 +42,9 @@ RUN apt-get update && apt-get install -y nano --no-install-recommends apt-utils
 kubeadm token create --print-join-command
 sudo kubeadm reset
 ```
+> bash into a running pod
+```
+kubectl exec -it <POD NAME> -- /bin/bash
 ```
 kubectl exec ${POD_NAME} -c ${CONTAINER_NAME} -- ${CMD} ${ARG1} ${ARG2} ... ${ARGN}
 ```
