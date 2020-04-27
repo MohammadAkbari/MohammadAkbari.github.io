@@ -17,6 +17,7 @@ title: Containerization
 ```
 docker run --name [container-name] -p [8080:80] -d [docker-image:tag]
 ```
+>
 > bash into a running container: 
 ```
 docker exec -it dca6c76bd4e0 /bin/bash
@@ -42,16 +43,21 @@ RUN apt-get update && apt-get install -y nano --no-install-recommends apt-utils
 kubeadm token create --print-join-command
 sudo kubeadm reset
 ```
+>
 > bash into a running pod
 ```
 kubectl exec -it <POD NAME> -- /bin/bash
 kubectl exec ${POD_NAME} -c ${CONTAINER_NAME} -- ${CMD} ${ARG1} ${ARG2} ... ${ARGN}
 ```
+>
+```
 kubectl get endpoints
 ```
+>
 ```
 kubectl rollout <restart, status, undo> deployment sample-dep
 ```
+>
 ```
 kubectl config view --raw -o json
 ```
