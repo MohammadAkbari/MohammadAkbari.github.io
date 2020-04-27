@@ -11,53 +11,46 @@ title: Containerization
 ## Docker
 > In short, containers are running systems defined by images. These images are made up of one or more layers (or sets of diffs) plus some metadata for Docker.
 
-### Commands
-
-> docker run
+### docker run
 ```
 docker run --name [container-name] -p [8080:80] -d [docker-image:tag]
 ```
->
-> bash into a running container: 
+### bash into a running container: 
 ```
 docker exec -it dca6c76bd4e0 /bin/bash
 ```
-> inspect
+### inspect
 ```
 docker image inspect web:latest
 docker image history web:latest
 ```
-> Run container
+### Run container
 ```
 docker build git://github.com/MohammadAkbari/kubesail.git#master:Client1 [--nocache=true]
 ```
-> nano
+### nano
 ```
 RUN apt-get update && apt-get install -y nano --no-install-recommends apt-utils
 ```
 
 ## Kubernetes
-
-### Commands
+### kubeadm
 ```
 kubeadm token create --print-join-command
 sudo kubeadm reset
 ```
->
-> bash into a running pod
+### bash into a running pod
 ```
 kubectl exec -it <POD NAME> -- /bin/bash
 kubectl exec ${POD_NAME} -c ${CONTAINER_NAME} -- ${CMD} ${ARG1} ${ARG2} ... ${ARGN}
 ```
->
+### Apis
 ```
 kubectl get endpoints
 ```
->
 ```
 kubectl rollout <restart, status, undo> deployment sample-dep
 ```
->
 ```
 kubectl config view --raw -o json
 ```
