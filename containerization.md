@@ -45,9 +45,7 @@ sudo kubeadm reset
 > bash into a running pod
 ```
 kubectl exec -it <POD NAME> -- /bin/bash
-```
 kubectl exec ${POD_NAME} -c ${CONTAINER_NAME} -- ${CMD} ${ARG1} ${ARG2} ... ${ARGN}
-```
 ```
 kubectl get endpoints
 ```
