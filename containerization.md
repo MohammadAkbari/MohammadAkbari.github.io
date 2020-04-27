@@ -106,3 +106,8 @@ ENTRYPOINT ["dotnet", "Api1.dll"]
 Dockerfile*
 **/*.md
 ```
+### VMware and Docker Conflict
+```
+bcdedit /set hypervisorlaunchtype off
+bcdedit /set hypervisorlaunchtype auto
+```
