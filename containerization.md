@@ -1,8 +1,11 @@
 ---
 title: Containerization
 ---
-## container
+## Container
 > A container is an operating system-level virtualization method that supports running isolated systems on a host, each with its own network and process space, sharing the same kernel. A container is quicker to build and quicker to start up than a virtual machine (seconds, rather than minutes)
+
+## Volumes
+> At a high-level, you create a volume, then you create a container, and you mount the volume into it. The volume gets mounted to a directory in the container’s filesystem, and anything written to that directory is written to the volume. If you then delete the container, the volume and its data will still exist.
 
 ## Kubectl Deployment
 
