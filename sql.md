@@ -102,3 +102,17 @@ END
 CLOSE cur    
 DEALLOCATE cur
 ```
+## Delete large
+```sql
+WHILE (1=1)
+BEGIN
+    DELETE TOP(1000) FROM ForumPost
+    IF @@ROWCOUNT < 1 BREAK
+END
+```
+## Check is null or empty
+```sql
+Select *
+From Table
+Where IsNull(col, '') = ''
+```
