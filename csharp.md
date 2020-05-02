@@ -141,3 +141,15 @@ sc.exe start Service1
 	<add key="aspnet:UseHostHeaderForRequestUrl" value="true" />
 </appSettings>
 ```
+```
+<system.webServer>
+  <security>
+    <requestFiltering removeServerHeader ="true" />
+  </security>
+  <httpProtocol>
+    <customHeaders>
+      <remove name="X-Powered-By" />
+    </customHeaders>
+  </httpProtocol>
+</system.webServer>
+```
