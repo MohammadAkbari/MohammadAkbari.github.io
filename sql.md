@@ -116,3 +116,9 @@ Select *
 From Table
 Where IsNull(col, '') = ''
 ```
+## sqlcmd
+```
+start sqlcmd -S "" -d "" -U "" -P "" -i query.sql
+WAITFOR DELAY '00:00:05'
+GO 20
+```
