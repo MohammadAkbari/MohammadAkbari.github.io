@@ -125,6 +125,15 @@ GO 20
 
 ## Index Physical Stats
 ```sql
+EXEC sys.sp_helpindex @objname = N'dbo.Table'
+
+SELECT OBJECT_NAME(i.object_id),
+	i.index_id,
+	i.name,
+	i.type_desc
+FROM sys.indexes AS i
+WHERE i.object_id = OBJECT_ID(N'dbo.Table')
+
 SELECT index_depth,
 	index_level,
 	record_count,
