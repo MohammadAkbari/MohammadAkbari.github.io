@@ -122,3 +122,21 @@ start sqlcmd -S "" -d "" -U "" -P "" -i query.sql
 WAITFOR DELAY '00:00:05'
 GO 20
 ```
+
+## Index Physical Stats
+```sql
+SELECT index_depth,
+	index_level,
+	record_count,
+	page_count,
+	avg_page_space_used_in_percent,
+	min_record_size_in_bytes,
+	max_record_size_in_bytes,
+	avg_record_size_in_bytes
+FROM sys.dm_db_index_physical_stats
+	(DB_ID(N'Database'),
+	OBJECT_ID(N'Database.dbo.Table'),
+	1,
+	NULL,
+	'DETAILED')
+```
