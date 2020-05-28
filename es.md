@@ -88,3 +88,8 @@ console.log(multiply ());
 - Use function in the global scope and for Object.prototype properties
 - Use class for object constructors.
 - Use => everywhere else.
+
+## Element event handlers
+```js
+$._data($("#btn").get(0), "events")["click"][1].handler()
+```
