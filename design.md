@@ -60,6 +60,11 @@ title: Design
 > It should be possible to change the behavior of a method without editing its source code.
 >
 > Approaches: Parameters, Inheritance, Composition(Injection), Extension methods
+>
+> Any class that marks one of its members as virtual is open to extension. This type of extension is via implementation inheritance.
+>
+> Interface inheritance is preferable to implementation inheritance.
+>
 
 ![ocp](images/ocp.jpg){: .center-image }
 
