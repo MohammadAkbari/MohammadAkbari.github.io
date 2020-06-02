@@ -153,3 +153,11 @@ sc.exe start Service1
   </httpProtocol>
 </system.webServer>
 ```
+
+### TLS 1.2
+```csharp
+ServicePointManager.DefaultConnectionLimit = 100;
+ServicePointManager.ServerCertificateValidationCallback = (senderX, certificate, chain, sslPolicyErrors) => true;
+ServicePointManager.Expect100Continue = true;
+ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+```
