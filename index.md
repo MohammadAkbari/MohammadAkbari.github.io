@@ -9,3 +9,5 @@ title: Home
 ## Healthy competition is the mother of innovation!
 
 ## The most correct code is that which is not written.
+
+## Programming is the art of telling another human what one wants the computer to do. ― Donald Knuth
