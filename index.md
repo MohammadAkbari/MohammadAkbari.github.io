@@ -13,3 +13,5 @@ title: Home
 ## Programming is the art of telling another human what one wants the computer to do. ― Donald Knuth
 
 ## Anything that can go wrong will go wrong. ― Murphy's Law
+
+## The only way to go fast is to go well.
