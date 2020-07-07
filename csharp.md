@@ -161,3 +161,18 @@ ServicePointManager.ServerCertificateValidationCallback = (senderX, certificate,
 ServicePointManager.Expect100Continue = true;
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 ```
+
+### Publish Single File
+```xml
+<PublishSingleFile>true</PublishSingleFile>
+<PublishTrimmed>true</PublishTrimmed>
+<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+```
+
+### Ignore appsettings.json on Publish
+```xml
+<ItemGroup>
+    <Content Update="appsettings.json" CopyToPublishDirectory="Never" />
+    <Content Update="appsettings.*.json" CopyToPublishDirectory="Never" />
+</ItemGroup>
+```
