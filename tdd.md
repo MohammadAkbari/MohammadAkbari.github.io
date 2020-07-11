@@ -28,6 +28,9 @@ title: Test Driven Development
 
 ### Naming
 > AddAuthor_Author_AuthorIsAdded
+>
 > AddAuthor: Name of the method being tested.
+>
 > Author: cenario (state) under which the method is being tested.
+>
 > AuthorIsAdded: Expected behavior when the scenario is invoked.
