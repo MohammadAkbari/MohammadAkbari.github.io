@@ -25,3 +25,9 @@ title: Test Driven Development
 > Pose is cross platform and runs anywhere .NET is supported. It targets .NET Standard 2.0 so it can be used across .NET platforms including .NET Framework, .NET Core, Mono and Xamarin. See version compatibility table here.
 >
 > <a href="https://www.nuget.org/packages/Pose/">Nuget</a>
+
+### Naming
+> AddAuthor_Author_AuthorIsAdded
+> AddAuthor: Name of the method being tested.
+> Author: cenario (state) under which the method is being tested.
+> AuthorIsAdded: Expected behavior when the scenario is invoked.
