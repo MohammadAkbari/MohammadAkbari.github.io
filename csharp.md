@@ -180,7 +180,8 @@ ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 ### RuntimeCompilation on Debug
 ```xml
 <ItemGroup>
-  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.1" Condition="'$(Configuration)' == 'Debug'"/>
+  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" 
+		    Version="3.1.1" Condition="'$(Configuration)' == 'Debug'"/>
 </ItemGroup>
 ```
 ```json
