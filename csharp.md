@@ -176,3 +176,21 @@ ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
     <Content Update="appsettings.*.json" CopyToPublishDirectory="Never" />
 </ItemGroup>
 ```
+
+### RuntimeCompilation on Debug
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.1" Condition="'$(Configuration)' == 'Debug'"/>
+</ItemGroup>
+```
+```json
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
+      }
+    }
+```
