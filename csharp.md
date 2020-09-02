@@ -191,7 +191,7 @@ ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
     }
 ```
 
-###
+### UTF in page source
 ```csharp
 services.Configure<WebEncoderOptions>(options =>
 {
