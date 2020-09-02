@@ -76,11 +76,6 @@ dotnet publish -c release -r win10-x64
 dotnet publish -c Release --self-contained -r ubuntu.18.04-x64
 ```
 
-## stdoutLogFile
-```
-<aspNetCore processPath="dotnet" arguments=".\WebApplication1.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout" hostingModel="InProcess" />
-```
-
 ## HttpClient Proxy
 ```csharp
 var proxy = new WebProxy
@@ -136,7 +131,7 @@ sc.exe create Service1 binPath= "C:\...\Service1.exe" start= auto
 sc.exe start Service1
 ```
 ###
-```
+```xml
 <appSettings>
 	<add key="aspnet:UseHostHeaderForRequestUrl" value="true" />
 </appSettings>
@@ -194,4 +189,12 @@ ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
         "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation"
       }
     }
+```
+
+###
+```csharp
+services.Configure<WebEncoderOptions>(options =>
+{
+    options.TextEncoderSettings = new TextEncoderSettings(UnicodeRanges.All);
+});
 ```
