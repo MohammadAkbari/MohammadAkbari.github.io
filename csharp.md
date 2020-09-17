@@ -91,7 +91,7 @@ var httpClientHandler = new HttpClientHandler
 var client = new HttpClient(handler: httpClientHandler, disposeHandler: true);
 ```
 
-## Pass Func with variable number of arguments 
+## Pass Func with a variable number of arguments 
 
 ```csharp
 protected ValidationResult Validate(params Func<ValidationResult>[] items)
@@ -127,7 +127,7 @@ Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Development");
 ```
 ## Install Windows Service
 ```
-sc.exe create Service1 binPath= "C:\...\Service1.exe" start= auto
+sc.exe create Service1 binPath= "C:\...\Service1.exe" obj= "[UserName]" password= ""  start= auto
 sc.exe start Service1
 ```
 ###
