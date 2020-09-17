@@ -199,7 +199,7 @@ services.Configure<WebEncoderOptions>(options =>
 });
 ```
 
-###
+### Request Logging
 ```csharp
 public class RequestLoggingMiddleware
 {
@@ -226,6 +226,35 @@ public class RequestLoggingMiddleware
 				context.Request?.Path.Value,
 				context.Response?.StatusCode);
 		}
+	}
+}
+```
+
+### Thread Count
+```csharp
+public class InfoController : ApiController
+{
+	[HttpGet]
+	[Route("info11")]
+	public object Index()
+	{
+		int logicalProcessorCount = Environment.ProcessorCount;
+		ThreadPool.GetMinThreads(out var minimumWorkerThreadCount, out var minimumIOCThreadCount);
+		ThreadPool.GetMaxThreads(out var maximumWorkerThreadCount, out var maximumIOCThreadCount);
+		ThreadPool.GetAvailableThreads(out int workerThreads, out int completionPortThreads);
+		int currentProcessThreadsCount = Process.GetCurrentProcess().Threads.Count;
+
+		return new
+		{
+			logicalProcessorCount,
+			minimumWorkerThreadCount,
+			minimumIOCThreadCount,
+			maximumWorkerThreadCount,
+			maximumIOCThreadCount,
+			workerThreads,
+			completionPortThreads,
+			currentProcessThreadsCount
+		};
 	}
 }
 ```
