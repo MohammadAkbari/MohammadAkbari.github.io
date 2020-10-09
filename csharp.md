@@ -258,3 +258,18 @@ public class InfoController : ApiController
 	}
 }
 ```
+
+### Fire and Forget
+```csharp
+[HttpGet("/fire-and-forget")]
+public IActionResult FireAndForget()
+{
+    _ = Task.Run(async () =>
+    {
+	await Task.Delay(10000);
+	_logger.LogInformation("--------------Hi------------");
+    });
+
+    return Accepted();
+}
+```
