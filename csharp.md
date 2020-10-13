@@ -245,7 +245,7 @@ public class RequestLoggingMiddleware
                     context.Request?.Method,
                     context.Request?.Path.Value,
                     context.Response?.StatusCode);
-        }
+       }
    }
 }
 ```
