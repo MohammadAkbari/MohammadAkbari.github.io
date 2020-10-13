@@ -203,30 +203,50 @@ services.Configure<WebEncoderOptions>(options =>
 ```csharp
 public class RequestLoggingMiddleware
 {
-	private readonly RequestDelegate _next;
-	private readonly ILogger<RequestLoggingMiddleware> _logger;
+    private readonly RequestDelegate _next;
+    private readonly ILogger<RequestLoggingMiddleware> _logger;
 
-	public RequestLoggingMiddleware(RequestDelegate next, ILogger<RequestLoggingMiddleware> logger)
-	{
-		_next = next;
-		_logger = logger;
-	}
+    public RequestLoggingMiddleware(RequestDelegate next, ILogger<RequestLoggingMiddleware> logger)
+    {
+        _next = next;
+        _logger = logger;
+    }
 
-	public async Task Invoke(HttpContext context)
-	{
-		try
-		{
-			await _next(context);
-		}
-		finally
-		{
-			_logger.LogInformation(
-				"Request {method} {url} => {statusCode}",
-				context.Request?.Method,
-				context.Request?.Path.Value,
-				context.Response?.StatusCode);
-		}
-	}
+    public async Task Invoke(HttpContext context)
+    {
+        try
+        {
+            var watch = new Stopwatch();
+
+            context.Response.OnStarting(() =>
+            {
+                watch.Stop();
+
+                context.Response
+                    .Headers
+                    .TryAdd("X-Processing-Time-Milliseconds",
+                        new[] { watch.ElapsedMilliseconds.ToString() });
+
+                context.Response
+                     .Headers
+                     .Add("X-Machine",
+			new[] { Environment.MachineName });
+                return Task.CompletedTask;
+           });
+
+           watch.Start();
+	   
+           await _next(context);
+       }
+       finally
+       {
+          _logger.LogInformation(
+                "Request {method} {url} => {statusCode}",
+                    context.Request?.Method,
+                    context.Request?.Path.Value,
+                    context.Response?.StatusCode);
+        }
+   }
 }
 ```
 
