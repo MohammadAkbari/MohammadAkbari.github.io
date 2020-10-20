@@ -149,3 +149,12 @@ FROM sys.dm_db_index_physical_stats
 	NULL,
 	'DETAILED')
 ```
+
+## Database Files Location
+```sql
+USE master;
+SELECT 
+  name 'Logical Name', 
+  physical_name 'File Location'
+FROM sys.master_files;
+```
