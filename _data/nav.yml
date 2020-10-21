@@ -2,11 +2,14 @@ links:
 
 - title: Home
   url: /
+  
+- title: ASP.NET Core
+  url: asp-net-core
 
 - title: C#
   url: csharp
 
-- title: EntityFramework
+- title: Entity Framework
   url: ef
 
 - title: Identity Server

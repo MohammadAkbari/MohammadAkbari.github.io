@@ -1,5 +1,5 @@
 ---
-title: EntityFramework
+title: Entity Framework
 ---
 
 ```
