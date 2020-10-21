@@ -11,7 +11,7 @@ Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Development");
 sc.exe create Service1 binPath= "C:\...\Service1.exe" obj= "[UserName]" password= ""  start= auto
 sc.exe start Service1
 ```
-###
+## web.config
 ```xml
 <appSettings>
 	<add key="aspnet:UseHostHeaderForRequestUrl" value="true" />
@@ -30,14 +30,14 @@ sc.exe start Service1
 </system.webServer>
 ```
 
-### Publish Single File
+## Publish Single File
 ```xml
 <PublishSingleFile>true</PublishSingleFile>
 <PublishTrimmed>true</PublishTrimmed>
 <RuntimeIdentifier>win-x64</RuntimeIdentifier>
 ```
 
-### Ignore appsettings.json on Publish
+## Ignore appsettings.json on Publish
 ```xml
 <ItemGroup>
     <Content Update="appsettings.json" CopyToPublishDirectory="Never" />
@@ -45,7 +45,7 @@ sc.exe start Service1
 </ItemGroup>
 ```
 
-### RuntimeCompilation on Debug
+## RuntimeCompilation on Debug
 ```xml
 <ItemGroup>
   <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" 
@@ -64,7 +64,7 @@ sc.exe start Service1
     }
 ```
 
-### UTF in page source
+## UTF in page source
 ```csharp
 services.Configure<WebEncoderOptions>(options =>
 {
@@ -72,7 +72,7 @@ services.Configure<WebEncoderOptions>(options =>
 });
 ```
 
-### Request Logging
+## Request Logging
 ```csharp
 public class RequestLoggingMiddleware
 {
@@ -130,7 +130,7 @@ public class RequestLoggingMiddleware
 }
 ```
 
-### Thread Count
+## Thread Count
 ```csharp
 public class InfoController : ApiController
 {
@@ -159,7 +159,7 @@ public class InfoController : ApiController
 }
 ```
 
-### Fire and Forget
+## Fire and Forget
 ```csharp
 [HttpGet("/fire-and-forget")]
 public IActionResult FireAndForget()
