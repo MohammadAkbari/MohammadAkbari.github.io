@@ -59,9 +59,33 @@ security.mixed_content.block_active_content
 ```
 while true; do curl 0.0.0.0:8090 ; sleep 5; done
 ```
-## Nginx
+## LXC
 ```
-nginx -s reload
-service haproxy restart
-systemctl restart nginx
+networkctl status -a
+```
+```yaml
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens33:
+      dhcp4: no
+      dhcp6: no
+  bridges:
+    br0:
+      interfaces: [ens33]
+      addresses: [192.168.42.142/24]
+      gateway4: 192.168.42.2
+      mtu: 1500
+      nameservers:
+        addresses: [192.168.42.2]
+      parameters:
+        stp: true
+        forward-delay: 4
+```
+```
+lxc launch ubuntu:18.04 container1
+lxc list
+lxc config device add container1 eth0 nic nictype=bridged parent=br0 name=eth0
+lxc exec container1  -- sudo /bin/bash
 ```
