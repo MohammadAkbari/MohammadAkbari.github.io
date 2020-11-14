@@ -128,3 +128,7 @@ ServicePointManager.ServerCertificateValidationCallback = (senderX, certificate,
 ServicePointManager.Expect100Continue = true;
 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
 ```
+### Write to file
+```csharp
+File.AppendAllText("D:\\files\\log.txt", "Hello World!", Encoding.UTF8)
+```
