@@ -11,6 +11,10 @@ sudo systemctl status ssh
 sudo swapon -s
 sudo swapoff -a
 ```
+## To check the listening ports and applications on Linux
+```
+lsof -i -P -n | grep LISTEN
+```
 
 ## Missing network connection
 ```
