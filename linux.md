@@ -89,3 +89,23 @@ lxc list
 lxc config device add container1 eth0 nic nictype=bridged parent=br0 name=eth0
 lxc exec container1  -- sudo /bin/bash
 ```
+## iptables
+### Save and Restore
+```
+iptables-save > /etc/iptables/rules.txt
+iptables-restore < /etc/iptables/rules.txt
+```
+### Delete rule
+```
+iptables -L --line-number
+iptables -D INPUT {line}
+```
+### Some rules
+```
+iptables -A INPUT -p tcp -m tcp --dport 8080 -s 192.168.42.1 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp -m multiport ! --dports 80,443,22 -j DROP
+```
+### Insert with priority
+```
+iptables -I INPUT {line} -i lo -p tcp --dport {port} -j ACCEPT -m comment --comment "This rule is here for this reason"
+```
