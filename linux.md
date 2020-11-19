@@ -108,3 +108,12 @@ iptables -A INPUT -p tcp -m tcp -m multiport ! --dports 80,443,22 -j DROP
 ```
 iptables -I INPUT {line} -i lo -p tcp --dport {port} -j ACCEPT -m comment --comment "This rule is here for this reason"
 ```
+
+### HAProxy
+```
+http-response set-header X-Server %s
+
+http-request set-var(txn.my_host) req.hdr(host),lower
+http-response add-header X-Target %[var(txn.my_host)]
+
+```
