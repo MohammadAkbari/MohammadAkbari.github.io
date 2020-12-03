@@ -46,6 +46,8 @@ sudo visudo
 ## Log request
 ```
 sudo tcpdump -ni any port 80 -vv -s0 -w http.pcap
+
+sudo tcpdump -ni eth0 host 192.168.42.1
 ```
 ## Chrome
 chrome://net-internals/#hsts
@@ -109,7 +111,7 @@ iptables -A INPUT -p tcp -m tcp -m multiport ! --dports 80,443,22 -j DROP
 iptables -I INPUT {line} -i lo -p tcp --dport {port} -j ACCEPT -m comment --comment "This rule is here for this reason"
 ```
 
-### HAProxy
+## HAProxy
 ```
 http-response set-header X-Server %s
 
