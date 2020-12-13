@@ -51,6 +51,23 @@ CROSS APPLY sys.Dm_exec_sql_text(r.sql_handle) AS st
 WHERE r.session_id != @@SPID
 ORDER BY r.cpu_time DESC
 ```
+
+## Exclusive access could not be obtained because the database is in use [refrence](https://stackoverflow.com/questions/22209499/sql-server-error-exclusive-access-could-not-be-obtained-because-the-database)
+```sql
+USE master
+GO
+
+ALTER DATABASE AdventureWorksDW
+SET SINGLE_USER
+--This rolls back all uncommitted transactions in the db.
+WITH ROLLBACK IMMEDIATE
+GO
+
+RESTORE DATABASE AdventureWorksDW
+FROM ...
+GO
+```
+
 ##  Check/Change Isolation Level
 ```sql
 DBCC USEROPTIONS
