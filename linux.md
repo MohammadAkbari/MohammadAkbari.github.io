@@ -119,3 +119,12 @@ http-request set-var(txn.my_host) req.hdr(host),lower
 http-response add-header X-Target %[var(txn.my_host)]
 
 ```
+
+### Telnet
+```
+openssl s_client -crlf -connect www.stackoverflow.com:443 -quiet
+telnet www.stackoverflow.com 443
+GET /questions HTTP/1.0
+Host: stackoverflow.com
+Connection: Keep-Alive
+```
