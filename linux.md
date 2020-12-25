@@ -120,11 +120,19 @@ http-response add-header X-Target %[var(txn.my_host)]
 
 ```
 
-### Telnet
+## Http
 ```
-openssl s_client -crlf -connect www.stackoverflow.com:443 -quiet
 telnet www.stackoverflow.com 443
 GET /questions HTTP/1.0
 Host: stackoverflow.com
 Connection: Keep-Alive
+```
+```
+openssl s_client -crlf -connect www.stackoverflow.com:443 -quiet
+GET /questions HTTP/1.0
+Host: stackoverflow.com
+Connection: Keep-Alive
+```
+```
+curl -vso /dev/null --http2 https://stackoverflow.com/
 ```
