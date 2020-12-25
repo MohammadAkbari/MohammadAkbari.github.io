@@ -136,3 +136,6 @@ Connection: Keep-Alive
 ```
 curl -vso /dev/null --http2 https://stackoverflow.com/
 ```
+```
+nghttp -v https://stackoverflow.com/
+```
