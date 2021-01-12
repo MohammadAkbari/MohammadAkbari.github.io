@@ -175,3 +175,8 @@ SELECT
   physical_name 'File Location'
 FROM sys.master_files;
 ```
+### Auto_Fix
+```sql
+USE Database
+EXEC sp_change_users_login 'Auto_Fix', 'UserName'
+```
