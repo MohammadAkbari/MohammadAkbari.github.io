@@ -15,3 +15,5 @@ title: Home
 ## Anything that can go wrong will go wrong. ― Murphy's Law
 
 ## The only way to go fast is to go well.
+
+## Your mind is not a cage. It is a garden. And it requires cultivating. ― Libba Bray
