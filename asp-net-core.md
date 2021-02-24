@@ -10,6 +10,11 @@ Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Development");
 ```
 sc.exe create Service1 binPath= "C:\...\Service1.exe" obj= "[UserName]" password= ""  start= auto
 sc.exe start Service1
+
+sc.exe queryex <service name>
+taskkill /F /PID <Service PID>
+
+taskkill /F /IM mmc.exe
 ```
 ## web.config
 ```xml
