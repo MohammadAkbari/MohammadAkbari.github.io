@@ -139,3 +139,8 @@ curl -vso /dev/null --http2 https://stackoverflow.com/
 ```
 nghttp -v https://stackoverflow.com/
 ```
+
+## scp
+```
+scp sheep.txt root@10.0.3.14:/root/workspace
+```
