@@ -64,7 +64,19 @@ WITH ROLLBACK IMMEDIATE
 GO
 
 RESTORE DATABASE AdventureWorksDW
-FROM ...
+FROM DISK = 'PATH\TO\Database.bak' 
+GO
+```
+
+```sql
+
+USE MASTER;
+
+ALTER DATABASE [DatabaseName] SET OFFLINE
+ALTER DATABASE [DatabaseName] SET ONLINE 
+
+-- Add users
+ALTER DATABASE [DatabaseName] SET MULTI_USER
 GO
 ```
 
