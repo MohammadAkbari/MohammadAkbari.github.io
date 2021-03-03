@@ -120,6 +120,11 @@ http-response add-header X-Target %[var(txn.my_host)]
 
 ```
 
+### HAProxy config check
+```
+haproxy -f /etc/haproxy/haproxy.cfg -c
+```
+
 ## Http
 ```
 telnet www.stackoverflow.com 443
