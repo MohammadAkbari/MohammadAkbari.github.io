@@ -125,8 +125,8 @@ http-response add-header X-Target %[var(txn.my_host)]
 haproxy -f /etc/haproxy/haproxy.cfg -c
 ```
 
-###
-``` http-request test
+### HAProxy http-request test
+```
 http-request return content-type image/jpeg file /PATH/TO/image.jpg if { path /image.jpg }
 ```
 
