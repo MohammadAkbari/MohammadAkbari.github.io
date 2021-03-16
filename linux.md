@@ -117,7 +117,6 @@ http-response set-header X-Server %s
 
 http-request set-var(txn.my_host) req.hdr(host),lower
 http-response add-header X-Target %[var(txn.my_host)]
-
 ```
 
 ### HAProxy config check
@@ -128,6 +127,12 @@ haproxy -f /etc/haproxy/haproxy.cfg -c
 ### HAProxy http-request test
 ```
 http-request return content-type image/jpeg file /PATH/TO/image.jpg if { path /image.jpg }
+```
+### Whitelist
+``` 
+acl network_allowed src -f /etc/haproxy/whitelist.lst
+acl restricted_domain  hdr(host) -i  example.com
+http-request deny if restricted_domain  !network_allowed
 ```
 
 ## Http
