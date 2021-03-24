@@ -12,6 +12,21 @@ links:
 - title: Entity Framework
   url: ef
 
+- title: Linux
+  url: linux
+  
+- title: Windows
+  url: windows
+  
+- title: Sql Server
+  url: sql
+
+- title: Elasticsearch
+  url: elastic
+
+- title: Redis
+  url: redis
+
 - title: Identity Server
   url: identity
 
@@ -20,21 +35,12 @@ links:
   
 - title: Microservices
   url: microservices
-
-- title: Elasticsearch
-  url: elastic
-
-- title: Redis
-  url: redis
   
 - title: JavaScript
   url: es
 
 - title: Containerization
   url: containerization
-
-- title: Linux
-  url: linux
   
 - title: Test Driven Development
   url: tdd
@@ -47,9 +53,6 @@ links:
  
 - title: REST API
   url: rest
-
-- title: Sql Server
-  url: sql
 
 - title: Nuget
   url: nuget
