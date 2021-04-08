@@ -11,6 +11,11 @@ sudo swapoff -a
 lsof -i -P -n | grep LISTEN
 ```
 
+## The sockstat command lists open Internet or UNIX domain sockets. [Detail](http://manpages.ubuntu.com/manpages/groovy/man1/sockstat.1.html)
+```
+sockstat - list open sockets
+```
+
 ## Missing network connection
 ```
 sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
