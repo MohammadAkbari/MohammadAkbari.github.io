@@ -8,7 +8,7 @@ Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Development");
 ```
 ## Install Windows Service
 ```
-sc.exe create Service1 binPath= "C:\...\Service1.exe" obj= "[UserName]" password= ""  start= auto
+sc.exe create Service1 binPath= "C:\...\Service1.exe" obj= "[UserName]" password= ""  start= [auto | delayed-auto]
 sc.exe start Service1
 
 sc.exe queryex <service name>
