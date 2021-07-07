@@ -4,7 +4,7 @@ title: SSL
 
 ## Generate ssl
 ```
-certbot certonly --manual --preferred-challenges=dns --agree-tos -d *.exanple.com
+certbot certonly --manual --preferred-challenges=dns --agree-tos -d *.example.com
 ```
 
 ## Generate pfx
