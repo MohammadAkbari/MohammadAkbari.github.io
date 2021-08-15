@@ -17,3 +17,6 @@ title: Home
 ## The only way to go fast is to go well.
 
 ## Your mind is not a cage. It is a garden. And it requires cultivating. ― Libba Bray
+
+## Don’t be afraid to start over. This time you’re not starting from scratch, you’re starting from experience. ―  
+
