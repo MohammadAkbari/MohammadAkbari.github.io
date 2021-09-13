@@ -103,3 +103,11 @@ console.log(multiply ());
 ```js
 $._data($("#btn").get(0), "events")["click"][1].handler()
 ```
+
+## CSS
+```css
+body {
+  unicode-bidi:bidi-override;
+  direction:rtl;
+}
+```
