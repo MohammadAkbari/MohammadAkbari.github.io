@@ -35,6 +35,17 @@ docker build git://github.com/MohammadAkbari/kubesail.git#master:Client1 [--noca
 ```
 RUN apt-get update && apt-get install -y nano --no-install-recommends apt-utils
 ```
+### [administrative privileges to docker](https://linuxconfig.org/how-to-install-docker-on-ubuntu-20-04-lts-focal-fossa)
+```bash
+sudo usermod -aG docker SOMEUSERNAME
+```
+
+###[docker container top](https://docs.docker.com/engine/reference/commandline/container_top/)
+```
+docker container top CONTAINER [ps OPTIONS]
+
+docker container logs
+```
 
 ## Kubernetes
 ### kubeadm
@@ -68,7 +79,7 @@ kubectl config view --raw -o json
 
 > If you want to deploy microservices at scale, you need a highly automated deployment process and infrastructure.
 
-## Dockerfile .Net core
+## [Dockerfile .Net core](https://docs.docker.com/samples/dotnetcore/)
 ```
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 #WORKDIR /app
