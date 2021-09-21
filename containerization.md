@@ -45,6 +45,8 @@ sudo usermod -aG docker SOMEUSERNAME
 docker container top CONTAINER [ps OPTIONS]
 
 docker container logs
+
+docker logs -f --tail -n=20 CONTAINER
 ```
 
 ## Kubernetes
