@@ -10,6 +10,8 @@ certbot certonly --manual --preferred-challenges=dns --agree-tos -d *.example.co
 ## Generate pfx
 ```
 openssl pkcs12 -export -out bundle.pfx -inkey privkey.pem -in cert.pem -certfile chain.pem
+
+sudo chmod a+rwx bundle.pfx
 ```
 
 ## Generate pem
