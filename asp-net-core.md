@@ -178,3 +178,16 @@ public IActionResult FireAndForget()
     return Accepted();
 }
 ```
+
+## Show Request Header
+```csharp
+endpoints.MapGet("/show-headers", async context =>
+{
+    var requestHeaders = string.Join("<br/>", context.Request.Headers
+	.OrderBy(e => e.Key).Select(e => $"{e.Key}: {e.Value}"));
+
+    var output = $"<h2>Request headers</h2>{requestHeaders}";
+    context.Response.ContentType = "text/html";
+    await context.Response.WriteAsync(output);
+});	
+```
