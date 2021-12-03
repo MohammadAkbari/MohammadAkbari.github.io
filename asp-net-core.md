@@ -8,7 +8,7 @@ Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Development");
 ```
 ## Install Windows Service
 ```
-sc.exe create Service1 binPath= "C:\...\Service1.exe" obj= "[UserName]" password= ""  start= auto
+sc.exe create Service1 binPath= "C:\...\Service1.exe" obj= "[UserName]" password= ""  start= [auto | delayed-auto]
 sc.exe start Service1
 
 sc.exe queryex <service name>
@@ -177,4 +177,17 @@ public IActionResult FireAndForget()
 
     return Accepted();
 }
+```
+
+## Show Request Header
+```csharp
+endpoints.MapGet("/show-headers", async context =>
+{
+    var requestHeaders = string.Join("<br/>", context.Request.Headers
+	.OrderBy(e => e.Key).Select(e => $"{e.Key}: {e.Value}"));
+
+    var output = $"<h2>Request headers</h2>{requestHeaders}";
+    context.Response.ContentType = "text/html";
+    await context.Response.WriteAsync(output);
+});	
 ```

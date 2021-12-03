@@ -8,6 +8,16 @@ title: JavaScript
 >
 > A closure is the combination of a function and the lexical environment within which that function was declared. This environment consists of any local variables that were in-scope at the time the closure was created.
 
+### ws
+```js
+let ws = new WebSocket("wss://example.com");
+ws.onmessage = message => console.log(`Received: ${message.data}`);
+
+ws.addEventListener('open', function (event) {
+    console.log(`Here`);
+});//https://javascript.info/websocket
+```
+
 ### sample 1
 ```js
 
@@ -92,4 +102,12 @@ console.log(multiply ());
 ## Element event handlers
 ```js
 $._data($("#btn").get(0), "events")["click"][1].handler()
+```
+
+## CSS
+```css
+body {
+  unicode-bidi:bidi-override;
+  direction:rtl;
+}
 ```
