@@ -210,3 +210,11 @@ FROM sys.master_files;
 USE Database
 EXEC sp_change_users_login 'Auto_Fix', 'UserName'
 ```
+### News that have multiple tags
+```sql
+SELECT NewsId FROM NewsTags
+GROUP BY NewsId
+HAVING SUM(CASE WHEN TagId = 1 THEN 1 ELSE 0 END) > 0 
+AND    SUM(CASE WHEN TagId = 2 THEN 1 ELSE 0 END) > 0 
+```
+
