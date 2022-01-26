@@ -97,6 +97,11 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) sh
 CROSS APPLY sys.dm_exec_query_plan(plan_handle) ph
 ```
 
+```sql
+SELECT is_read_committed_snapshot_on FROM sys.databases 
+WHERE name= 'DB NAME'
+```
+
 ##  Change Isolation Level
 ```sql
 DBCC USEROPTIONS
