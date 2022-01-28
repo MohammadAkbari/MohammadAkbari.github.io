@@ -20,3 +20,5 @@ title: Home
 
 ## Don’t be afraid to start over. This time you’re not starting from scratch, you’re starting from experience. ―  
 
+## Distributed means that no single point of failure can bring down an entire system.
+
