@@ -25,3 +25,8 @@ netstat -ano | findStr "8080"
 
 tasklist /fi "pid eq 2216"
 ```
+
+## tail
+```
+Get-Content -path 'PATH_TO_FILE' -Tail 2 -Wait
+```
