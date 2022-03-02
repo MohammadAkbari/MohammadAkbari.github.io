@@ -111,3 +111,29 @@ body {
   direction:rtl;
 }
 ```
+## Lazy image
+```js
+(function () {
+    $(function () {
+        function imgLoad(imgDOM, path, item) {
+            imgDOM.setAttribute('src', path);
+            item.style.display = 'block';
+        }
+
+        var items = document.querySelectorAll('a.lazy');
+
+        for (var i = 0; i < items.length; i++) {
+
+            var item = items[i];
+
+            var imgDom = item.querySelector('img');
+
+            var path = imgDom.getAttribute('data-origin');
+
+            var img = new Image();
+            img.onload = imgLoad(imgDom, path, item);
+            img.src = path;
+        }
+    });
+}());
+```
