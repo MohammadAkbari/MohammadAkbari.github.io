@@ -23,3 +23,5 @@ title: Home
 ## Distributed means that no single point of failure can bring down an entire system.
 
 ## If you try and fail, Congratulations. Most people won’t even try.
+
+## You have to learn to keep emotions out of the equation and maintain objectivity.
