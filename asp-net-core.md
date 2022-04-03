@@ -191,3 +191,6 @@ endpoints.MapGet("/show-headers", async context =>
     await context.Response.WriteAsync(output);
 });	
 ```
+## Left-To-Right Mark
+Unicode Hex Character Code &#x200e;   
+
