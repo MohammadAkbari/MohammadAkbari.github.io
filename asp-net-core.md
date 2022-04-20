@@ -135,6 +135,33 @@ public class RequestLoggingMiddleware
 }
 ```
 
+```csharp
+public class RequestLoggingMiddleware
+{
+	private readonly RequestDelegate _next;
+	private readonly ILogger<RequestLoggingMiddleware> _logger;
+
+	public RequestLoggingMiddleware(RequestDelegate next, ILogger<RequestLoggingMiddleware> logger)
+	{
+		this._next = next;
+		_logger = logger;
+	}
+
+	public async Task Invoke(HttpContext context)
+	{
+		var builder = new StringBuilder(Environment.NewLine);
+		foreach (var header in context.Request.Headers)
+		{
+			builder.AppendLine($"{header.Key}:{header.Value}");
+		}
+
+		_logger.LogInformation(builder.ToString());
+
+		await _next(context);
+	}
+}
+```
+
 ## Thread Count
 ```csharp
 public class InfoController : ApiController
