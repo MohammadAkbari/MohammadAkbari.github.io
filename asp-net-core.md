@@ -221,3 +221,15 @@ endpoints.MapGet("/show-headers", async context =>
 ## Left-To-Right Mark
 Unicode Hex Character Code &#x200e;   
 
+###
+```csharp
+var webApplicationOptions = new WebApplicationOptions()
+{
+    ContentRootPath = AppContext.BaseDirectory,
+    Args = args,
+    ApplicationName = System.Diagnostics.Process.GetCurrentProcess().ProcessName
+};
+
+var builder = WebApplication.CreateBuilder(webApplicationOptions);	
+```
+
