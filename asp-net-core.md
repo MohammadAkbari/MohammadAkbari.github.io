@@ -221,7 +221,7 @@ endpoints.MapGet("/show-headers", async context =>
 ## Left-To-Right Mark
 Unicode Hex Character Code &#x200e;   
 
-###
+## Minimal
 ```csharp
 var webApplicationOptions = new WebApplicationOptions()
 {
