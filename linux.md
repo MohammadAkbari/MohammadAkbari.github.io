@@ -164,3 +164,10 @@ nghttp -v https://stackoverflow.com/
 ```
 scp sheep.txt root@10.0.3.14:/root/workspace
 ```
+
+## crontab
+```bash
+crontab -e
+ */1 * * * * date >> /home/mohammad/socket.log
+ */1 * * * * ss | grep :5601 | wc -l >> /home/mohammad/socket.log
+```
