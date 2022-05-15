@@ -54,18 +54,28 @@ ORDER BY r.cpu_time DESC
 
 ## Exclusive access could not be obtained because the database is in use [refrence](https://stackoverflow.com/questions/22209499/sql-server-error-exclusive-access-could-not-be-obtained-because-the-database)
 ```sql
-USE master
+USE master;
 GO
-
-ALTER DATABASE AdventureWorksDW
+ALTER DATABASE AdventureWorks
 SET SINGLE_USER
---This rolls back all uncommitted transactions in the db.
-WITH ROLLBACK IMMEDIATE
+WITH ROLLBACK IMMEDIATE;
+
+RESTORE DATABASE AdventureWorks
+  FROM DISK = 'PATH\TO\AdventureWorks.bak'
+  WITH REPLACE,
+  MOVE 'AdventureWorks' TO 'PATH\TO\AdventureWorks.mdf',
+  MOVE 'AdventureWorks_log' TO 'PATH\TO\AdventureWorks_log.ldf';
+
+ALTER DATABASE AdventureWorks
+SET MULTI_USER;
 GO
 
-RESTORE DATABASE AdventureWorksDW
-FROM DISK = 'PATH\TO\Database.bak' 
-GO
+SELECT request_session_id FROM sys.dm_tran_locks 
+WHERE resource_database_id = DB_ID('AdventureWorks')
+
+exec sp_who
+
+KILL 87
 ```
 
 ```sql
