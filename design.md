@@ -3,6 +3,7 @@ title: Design
 ---
 ## Definition
 > Abstraction: To simplify reality
+> 
 > Encapsulation: Hiding data and complexity
 
 ## Architecting software
