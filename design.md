@@ -1,6 +1,9 @@
 ---
 title: Design
 ---
+## Definition
+> Abstraction: To simplify reality
+> Encapsulation: Hiding data and complexity
 
 ## Architecting software
 > Architecting software always involves tension between pragmatism and idealism — balancing product needs, the pressures of growth, and the capabilities of a team.
