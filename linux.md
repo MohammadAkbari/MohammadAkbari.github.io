@@ -171,3 +171,17 @@ crontab -e
  */1 * * * * date >> /home/mohammad/socket.log
  */1 * * * * ss | grep :5601 | wc -l >> /home/mohammad/socket.log
 ```
+
+## nginx debug
+```
+server {
+    listen 80;
+    server_name example.com;
+
+    location / {
+        default_type text/html;
+        return 200 "<!DOCTYPE html><h2>gangnam style!</h2>\n";
+    }
+}
+
+```
