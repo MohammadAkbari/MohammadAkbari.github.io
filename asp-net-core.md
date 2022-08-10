@@ -6,6 +6,11 @@ title: ASP.NET Core
 ```
 Environment.SetEnvironmentVariable("ASPNETCORE_ENVIRONMENT", "Development");
 ```
+### Publish on linux
+```
+dotnet publish -c release -r linux-x64 --self-contained false -o PATH
+```
+
 ## Install Windows Service
 ```
 sc.exe create Service1 binPath= "C:\...\Service1.exe" obj= "[UserName]" password= ""  start= [auto | delayed-auto]
