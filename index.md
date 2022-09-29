@@ -31,3 +31,5 @@ title: Home
 ## You have to learn to keep emotions out of the equation and maintain objectivity.
 
 ## If fifty million people say something foolish, it is still foolish. ―  W. Somerset Maugham.
+
+## Iron Cross of project management.Good, fast, cheap, done: Pick any three you like.
