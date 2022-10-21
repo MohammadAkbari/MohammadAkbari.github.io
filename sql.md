@@ -77,7 +77,6 @@ exec sp_who
 
 KILL 87
 ```
-
 ```sql
 
 USE MASTER;
@@ -88,6 +87,15 @@ ALTER DATABASE [DatabaseName] SET ONLINE
 -- Add users
 ALTER DATABASE [DatabaseName] SET MULTI_USER
 GO
+```
+## Database Files Location
+```sql
+EXEC sp_helpdb 'Database'
+```
+### Auto_Fix
+```sql
+USE Database
+EXEC sp_change_users_login 'Auto_Fix', 'UserName'
 ```
 
 ##  Check Isolation Level
@@ -210,20 +218,6 @@ FROM sys.dm_db_index_physical_stats
 	1,
 	NULL,
 	'DETAILED')
-```
-
-## Database Files Location
-```sql
-USE master;
-SELECT 
-  name 'Logical Name', 
-  physical_name 'File Location'
-FROM sys.master_files;
-```
-### Auto_Fix
-```sql
-USE Database
-EXEC sp_change_users_login 'Auto_Fix', 'UserName'
 ```
 ### News that have multiple tags
 ```sql
