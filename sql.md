@@ -139,6 +139,20 @@ INSERT INTO @PhoneNumbers VALUES
 ('3')
 ```
 
+## CSV to Temp Table
+```sql
+CREATE TABLE #Sample(Id BIGINT)
+
+BULK INSERT #Sample
+FROM 'C:\sample.csv'
+WITH
+(
+	FIRSTROW = 2
+)
+
+SELECT * FROM #Sample
+```
+
 ## TempDB
 
 > The tempdb system database is a global resource that is available to all users connected to the instance of SQL Server and is used to hold the following:
