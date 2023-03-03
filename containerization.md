@@ -11,6 +11,24 @@ title: Containerization
 
 ![images/kubectl_deployment](images/kubectl_deployment.jpg){: .center-image }
 
+## NodePort
+```
+apiVersion: v1
+kind: Service
+metadata:  
+  name: web-api-node-port
+  namespace: production
+spec:
+  selector: 
+    workload.user.cattle.io/workloadselector:apps.deployment-production-web-api
+  type: NodePort
+  ports:  
+  - name: http
+    port: 80
+    targetPort: 80
+    nodePort: 30036
+    protocol: TCP
+```
 ## Docker
 > In short, containers are running systems defined by images. These images are made up of one or more layers (or sets of diffs) plus some metadata for Docker.
 
