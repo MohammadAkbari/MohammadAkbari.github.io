@@ -12,6 +12,9 @@ links:
 - title: Entity Framework
   url: ef
 
+- title: Git
+  url: git
+
 - title: Linux
   url: linux
   
