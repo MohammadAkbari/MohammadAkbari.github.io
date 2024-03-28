@@ -52,7 +52,7 @@ WHERE r.session_id != @@SPID
 ORDER BY r.cpu_time DESC
 ```
 
-## kill all database connections
+## Kill all database connections
 ```sql
 USE [master];
 
