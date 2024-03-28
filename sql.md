@@ -52,6 +52,18 @@ WHERE r.session_id != @@SPID
 ORDER BY r.cpu_time DESC
 ```
 
+## kill all database connections
+```sql
+USE [master];
+
+DECLARE @kill varchar(8000) = '';  
+SELECT @kill = @kill + 'kill ' + CONVERT(varchar(5), session_id) + ';'  
+FROM sys.dm_exec_sessions
+WHERE database_id  = db_id('MyDB')
+
+EXEC(@kill);
+```
+
 ## Exclusive access could not be obtained because the database is in use [refrence](https://stackoverflow.com/questions/22209499/sql-server-error-exclusive-access-could-not-be-obtained-because-the-database)
 ```sql
 USE master;
