@@ -17,7 +17,7 @@ curl -H "Content-Type: application/x-www-form-urlencoded" \
 -d "name=value" \
 https://example.com/
 
-curl -D - -o /dev/null https://github.com -H 'KEY: VALUE' --max-time 15
+curl -D - -o /dev/null https://github.com --max-time 15
 ```
 
 ## Find process by port
