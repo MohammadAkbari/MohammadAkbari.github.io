@@ -1,6 +1,14 @@
 ---
 title: Linux
 ---
+### Remove Key in Nginx
+```
+ls $(grep -R 'pattern' /path/to/cache/ | awk '{print $3}')
+rm $(grep -R 'pattern' /path/to/cache/ | awk '{print $3}')
+grep -R 'pattern' /path/to/cache/ | awk '{print $1}' | xargs -I % rm %
+
+```
+
 ### Disable SWAP
 ```
 sudo swapon -s
