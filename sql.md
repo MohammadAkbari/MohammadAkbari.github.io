@@ -15,6 +15,19 @@ GROUP BY
     dbid, loginame
 ```
 
+## Active Sessions
+```sql
+SELECT 
+    session_id, 
+    login_name, 
+    host_name, 
+    program_name,
+    status
+FROM sys.dm_exec_sessions
+WHERE database_id = DB_ID('DB_Name')
+ORDER BY host_name 
+```
+
 ## Top queries consuming High CPU [refrence](https://blogs.msdn.microsoft.com/docast/2017/07/30/sql-high-cpu-troubleshooting-checklist/)
 ```sql
 SELECT
@@ -72,6 +85,14 @@ SELECT
    ) AS [SQL]
   FROM sys.dm_exec_requests r 
  WHERE command IN ('RESTORE DATABASE', 'BACKUP DATABASE')
+```
+
+## Kill all database connections
+```sql
+UPDATE STATISTICS [TableName] WITH FULLSCAN;
+UPDATE STATISTICS [TableName] WITH SAMPLE 50 PERCENT;
+UPDATE STATISTICS [TableName] WITH SAMPLE 100000 ROWS;
+
 ```
 
 ## Kill all database connections
