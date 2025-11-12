@@ -1,6 +1,11 @@
 ---
 title: Sql Server
 ---
+## In Recovery Progress
+```sql
+EXEC xp_readerrorlog 0, 1, N'Recovery';
+```
+
 ## Number of Connections
 ```sql
 SELECT 
