@@ -6,6 +6,28 @@ title: Sql Server
 EXEC xp_readerrorlog 0, 1, N'Recovery';
 ```
 
+## Stuck on Not Synchronized
+```sql
+ALTER DATABASE DBANME SET HADR RESUME;
+```
+
+##
+```sql
+SELECT 
+    DB_NAME(database_id),
+    synchronization_state_desc,
+    synchronization_health_desc,
+    suspend_reason_desc,
+    redo_queue_size,
+    redo_rate,
+    log_send_queue_size,
+    last_redone_time,
+    last_commit_time,
+    DATEDIFF(SECOND, last_redone_time, GETDATE()) as seconds_since_last_redo
+FROM sys.dm_hadr_database_replica_states
+WHERE DB_NAME(database_id) = 'DBANME';
+```
+
 ## Number of Connections
 ```sql
 SELECT 
